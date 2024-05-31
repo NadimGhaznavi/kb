@@ -1,7 +1,13 @@
-theme: minima
+remote_theme: jekyll/minima
+
 minima:
   skin: dark
+
 plugins:
 - jekyll-remote-theme
+
 title: "Bear & Moose Knowledge Base"
 
+author:
+  name: NadimGhaznavi
+  email: nghaznavi@gmail.com
