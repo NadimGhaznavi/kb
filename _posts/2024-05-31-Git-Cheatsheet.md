@@ -1,5 +1,7 @@
 ---
 title: Git Cheatsheet
+layout: post
+date: 2025-05-30
 ---
 
 # Create a New Local Repo and Sync it to GitHub
