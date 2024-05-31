@@ -1,6 +1,6 @@
 ---
-title: Git Cheatsheet
 layout: post
+title: Git Cheatsheet
 date: 2025-05-30
 ---
 
