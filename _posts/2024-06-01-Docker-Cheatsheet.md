@@ -28,5 +28,8 @@ docker images
 ```
 docker rmi <image-name>
 ```
-
+# Login to a running docker container
+```
+docker exec -it xmrig-dev /bin/sh
+```
 
