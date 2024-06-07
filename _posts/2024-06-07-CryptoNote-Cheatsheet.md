@@ -6,7 +6,7 @@ date: 2024-06-07
 
 # Introduction and Scope
 
-This page is central point for gathering informatin and references to the CryptoNote  
+This page is central point for gathering information and references to the CryptoNote  
 
 # Links
 
