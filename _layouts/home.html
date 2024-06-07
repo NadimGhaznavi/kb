@@ -23,7 +23,7 @@ layout: base
       <tr>
         <th>Date</th><th>Article</th></tr>
       {%- for post in posts -%}
-        <td>{{ post.date | date: date_format }}</td><td><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></td>
+        <tr><td>{{ post.date | date: date_format }}</td><td><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></td></tr>
       {%- endfor -%}
     </table>
 
