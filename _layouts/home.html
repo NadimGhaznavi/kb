@@ -18,15 +18,14 @@ layout: base
     {%- if page.list_title -%}
       <h2 class="post-list-heading">{{ page.list_title }}</h2>
     {%- endif -%}
-  | Date | Article |
-  |------|---------|
-    <ul class="post-list">
-
       {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+    <table>
+      <tr>
+        <th>Date</th><th>Article</th></tr>
       {%- for post in posts -%}
-      | {{ post.date | date: date_format }}  | <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a> |
+        <td>{{ post.date | date: date_format }}</td><td><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></td>
       {%- endfor -%}
-    </ul>
+    </table>
 
     {% if site.paginate %}
       <div class="pager">
