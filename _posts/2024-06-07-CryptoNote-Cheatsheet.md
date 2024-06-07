@@ -10,4 +10,4 @@ This page is central point for gathering informatin and references to the Crypto
 
 # Links
 
-* [CryptoNote White Paper]("/assets/pdf/crypto_note_2013_v2.0.pdf")
+* [CryptoNote White Paper](/assets/pdf/crypto_note_2013_v2.0.pdf)
