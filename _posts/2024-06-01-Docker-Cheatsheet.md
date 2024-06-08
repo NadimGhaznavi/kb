@@ -52,7 +52,14 @@ mkdir xmrig-run
 sudo docker build -t xmrig-run .
 ```
 Create a container and start it up.
+```
+docker run -d xmrig-run
+```
 
+# Push a Docker image to docker.hub
+```
+docker push nadimdg/xmrig:autostart
+```
 
 
 
