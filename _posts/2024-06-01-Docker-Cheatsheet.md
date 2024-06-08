@@ -33,3 +33,27 @@ docker rmi <image-name>
 docker exec -it xmrig-dev /bin/sh
 ```
 
+# Create a new container
+
+## Create a Dockerfile
+First create a docker file. An example is shown below:
+```
+FROM alpine:latest
+
+RUN apk add --no-cache git 
+
+WORKDIR /
+
+CMD ["/bin/sh", "-c", "while true; do sleep 1; done"]
+```
+Next create an image.
+```
+mkdir xmrig-run
+sudo docker build -t xmrig-run .
+```
+Create a container and start it up.
+
+
+
+
+
