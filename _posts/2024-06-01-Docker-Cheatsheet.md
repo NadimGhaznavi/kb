@@ -4,6 +4,14 @@ title: Docker Cheatsheet
 date: 2024-06-01
 ---
 
+# Commit a snapshot of a running container and save it a docker image
+```
+docker commit [container ID] [new image name]
+```
+E.g.
+```
+docker commit busy_wiles nadimdg/xmrig:auto4
+
 # List all running containers
 ```
 docker ps
