@@ -157,7 +157,7 @@ fi
 
 # Links
 
-* [P2Pool on GitHub](https://github.com/SChernykh/p2pool/blob/master/README.md)
+* [P2Pool on GitHub](https://github.com/SChernykh/p2pool)
   * [Build Instructions](https://github.com/SChernykh/p2pool/blob/master/README.md#build-instructions)
 * [Krewlar's](https://www.reddit.com/user/krewlar/) [Reddit Post](https://www.reddit.com/r/MoneroMining/comments/12w28m6/comment/jhffnn8/?utm_source=share&utm_medium=web2x&context=3&rdt=38081) on setting the the P2Pool socket and service definitions
 * [Source code for P2Pool Observer](https://git.gammaspectra.live/P2Pool/observer)
