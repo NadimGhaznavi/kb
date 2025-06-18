@@ -34,7 +34,7 @@ This site is a personal knowledge base. It contains basic reference material tha
 
 * [Jekyll](/pages/Jekyll.html) - Static site generator
 * [GitHub](/pages/GitHub.html) - All things GitHub
-* [GitHub Flavored Markdown](GitHub-Flavored-Markdown.html) - Used by GitHub Pages 
+* [GitHub Flavored Markdown](/pages/GitHub-Flavored-Markdown.html) - Used by GitHub Pages 
 * [Git](/pages/Git.html) - Version control
 
 ---
@@ -93,12 +93,18 @@ This site is a personal knowledge base. It contains basic reference material tha
 * [Configuring a Persistent WiFi Connection using WPA Supplicant](/pages/Configuring-a-Persistent-WiFi-Connection-using-WPA-Supplicant.html)
 * [Create-A-Container-Running-XMRig](/pages/Deploy-xmrig-on-a-container.html)
 * [upnpc](/pages/upnpc.html) - Configuring Port Forwarding on your Router
-* [List Files Installed Files for a Debian Package](NadimGhaznavi/kb/wiki/List-Files-Installed-Files-for-a-Debian-Package.html)
+* [List Files Installed Files for a Debian Package](/pages/List-Files-Installed-Files-for-a-Debian-Package.html)
 * [HOWTO Enable and Disable the OS GUI](/pages/Howto-Enable-And-Disable-The-OS-GUI.html)
 * [HOWTO Disable Suspend and Hibernate](/pages/Howto-Disable-Suspend-and-Hibernate.html)
-* [HOWTO Create a Persistent Linux Swap File](/Nadimghaznavi/kb/wiki/Howto-Create-a-Persistent-Linux-Swap-File.html)
+* [HOWTO Create a Persistent Linux Swap File](/pages/Howto-Create-a-Persistent-Linux-Swap-File.html)
 
-----
+---
+
+# Aquaponics
+
+* [Aquaponics Academy Podcast Series](https://www.youtube.com/playlist?list=PLAPahqrfGZZmUNzrQV0ZwKjUrmqq-Stqh)
+
+---
 
 # ESL with Carrot
 
