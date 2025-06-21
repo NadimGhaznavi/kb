@@ -7,11 +7,16 @@ layout: default
 
 * [Introduction and Scope](#introduction-and-scope)
 * [Interactive Commands](#interactive-commands)
+* [Import Tool)(#import-tool)
 * [Links](#links)
+
+---
 
 # Introduction and Scope
 
 This page has information about `monerod` the Monero XMR Blockchain Daemon.
+
+---
 
 # Interactive Commands
 
@@ -72,8 +77,20 @@ Commands:
   version
 ```
 
+---
+
+# Import Tool
+
+Example import commands:
+```
+bin/monero-blockchain-import --data-dir /opt/prod/monero-blockchain \
+  --input-file 2025-06-03_blockchain.dat --log-level 0 --batch 1 --resume 1
+```
+
+---
+
 # Links
 
 * [Monero Homepage](https://www.getmonero.org/)
-  * [Monero GUI Wallet Source Code](https://github.com/monero-project/monero-gui)
+* [Monero Source Code on GitHub](https://github.com/monero-project/monero-gui)
 * [Building Monerod from Source](https://xmr.osoyalce.com/pages/Building-Monerod-from-Source.html)
