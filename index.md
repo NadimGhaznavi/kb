@@ -47,6 +47,7 @@ This site is a personal knowledge base. It contains basic reference material tha
 * [Model, View, Controller Pattern in Python](/pages/Model-View-Controller-Pattern-in-Python.html)
 * [Pygame](/pages/Pygame.html) - An advanced UI framework that is console based
 * [PyMongo](/pages/PyMongo.html) - Python library for accessing MongoDb
+* [PyPI](/pages/PyPI.html) - Python Package Index
 * [Python BTrees](/pages/Python-BTrees.html)
 * [Python Generator Functions](/pages/Python-Generator-Functions.html)
 * [Python-sqlite3](/pages/Python-sqlite3.html) - Python's SQLite module
