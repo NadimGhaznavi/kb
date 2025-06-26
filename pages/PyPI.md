@@ -10,13 +10,13 @@ The *Python Package Index* is an open publishing platform for Python modules. On
 
 ---
 
-# Creating a PyPI Account
+# PyPI Account
 
 In order to publish a package you need an account. Sign up [here](https://pypi.org/account/register/).
 
 ---
 
-# Creating an API Token
+# PyPI API Token
 
 You will also need an API token. In order to generate one:
 
@@ -30,7 +30,7 @@ You will also need an API token. In order to generate one:
 
 ---
 
-# Installing the API Token
+# Installing the Token
 
 You'll need to create a `.pypirc` file in your home directory to publish packages using twine. Here's a complete listing of my `/home/nadim/.pypirc` file (the token has been truncated):
 
@@ -42,7 +42,7 @@ You'll need to create a `.pypirc` file in your home directory to publish package
 
 ---
 
-# Publishing Pre-Requisites
+# Pre-Requisites
 
 You'll need a couple of *pip* packages to publish using `twine`. You can create a *venv* environment for this purpose (so you don't pollute your system's Python installation). The example below shows the creation of a venv environment called *pypi*:
 
@@ -73,7 +73,7 @@ To be clear, my `Db4eSystemd.py` module is renamed to `db4e-systemd/Db4eSystemd/
 
 ---
 
-# Create the setup.py Script
+# The setup.py Script
 
 Here is an example showing the complete listing of the `setup.py` script:
 
@@ -102,7 +102,7 @@ You may note that there is a reference to GitHub. As a best practice, you should
 
 ---
 
-# Create the pyproject.toml File
+# The pyproject.toml File
 
 Here is an example showing the complete listing of the `pyproject.toml` file:
 
@@ -114,19 +114,19 @@ build-backend = "setuptools.build_meta"
 
 ---
 
-# Create a README.md File
+# The README.md File
 
 You should create a *README.md* file describing what your module does and how to use it. [Here](https://github.com/NadimGhaznavi/db4e-systemd/blob/main/README.md) is an example of the *README.md* file used for the *db4e-systemd* module.
 
 ---
 
-# Maintain a CHANGELOG.md
+# The CHANGELOG.md File
 
 The *CHANGELOG.md* is exactly what it sounds like; a change log. You should maintain this file as you provide bug-fixes and enhancements. You can see an example [here](https://github.com/NadimGhaznavi/db4e-systemd/blob/main/CHANGELOG.md).
 
 ---
 
-# Create the Package Distribution Files
+# Create the Distribution
 
 You create the package distribution files using your setup script. Before you do that, be sure to clean out the `dist` directory contents so you don't publish old artifacts:
 
@@ -139,7 +139,7 @@ Note that the commands above include the Python venv prompt....
 
 ---
 
-# Publish the Package to PyPI
+# Publish 
 
 Finally, you can publish the package to the [PyPI](https://pypi.org/) site using the `twine` command.
 
@@ -151,7 +151,7 @@ That's it!! You're done! 🎉
 
 ---
 
-# Update GitHub Repository
+# Update GitHub
 
 Don't forget to update your associated GitHub respository. Here are the commands I used when doing the `v1.1.0` release of the `db4e-systemd` package:
 
