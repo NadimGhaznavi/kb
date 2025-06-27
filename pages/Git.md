@@ -43,6 +43,14 @@ git revert f814dd7
 
 ---
 
+# Create a new Branch
+
+```
+git checkout -b textual-snake
+```
+
+---
+
 # Checkout by Commit Tag
 
 ```

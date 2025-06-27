@@ -9,3 +9,4 @@ layout: default
 * [Textual Homepage](https://textual.textualize.io/)
   * [Guide](https://textual.textualize.io/guide/)
     * [Devtools](https://textual.textualize.io/guide/devtools/)
+    * [Builtin Widgets](https://textual.textualize.io/widgets/)
