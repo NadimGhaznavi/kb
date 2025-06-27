@@ -1,5 +1,6 @@
 ---
 title: Knowledge Base
+description: The Bear and Moose Knowledge Base
 layout: default
 ---
 
