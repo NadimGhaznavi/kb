@@ -3,7 +3,9 @@ title: Docker
 layout: default
 ---
 
-# Add Docker's GPG key
+# Installing Docker
+
+## Add Docker's GPG key
 
 ```
 sudo apt-get update
@@ -13,9 +15,7 @@ sudo curl -fsSL https://download.docker.com/linux/debian/gpg -o /etc/apt/keyring
 sudo chmod a+r /etc/apt/keyrings/docker.asc
 ```
 
----
-
-# Add the repository to Apt sources:
+## Setup the Docker Repo
 
 ```
 echo \
@@ -33,7 +33,7 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 
 ---
 
-# Pull a Container Image from DockerHub
+# Pull an Image from DockerHub
 
 ```
 sudo docker pull debian
@@ -117,6 +117,15 @@ Where:
 -d: detach
 -i: interactive
 ```
+
+---
+
+# Stop a Container
+
+```
+docker stop <image-name>
+```
+
 ---
 
 # Create a Container from a Dockerfile

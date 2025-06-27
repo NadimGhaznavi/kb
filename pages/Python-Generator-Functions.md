@@ -13,5 +13,5 @@ Cool stuff!!
 
 # Links
 
-* [Generator Tricks for Systems Programmers](/NadimGhaznavi/kb/blob/main/assets/pdf/python-generators.pdf) by David Beazley
+* [Generator Tricks for Systems Programmers](/pdf/python-generators.pdf) by David Beazley
 
