@@ -43,6 +43,7 @@ textual console -x SYSTEM -x EVENT -x DEBUG -x INFO
 
 * [Dolphi](https://github.com/charles-001/dolphie) - MySQL/MariaDB & ProxySQL analytics
 * [Harlequin](https://github.com/tconbeer/harlequin) - DB client
+* [PlotextPlot](https://github.com/Textualize/textual-plotext/tree/main/examples) - Plots of Weather data
 * [Posting](https://github.com/darrenburns/posting) - The API client that lives in your terminal
 * [Memray](https://github.com/bloomberg/memray) - Memory profiler
 * [Toolong](https://github.com/textualize/toolong) - View, tail, merge, and search logs
