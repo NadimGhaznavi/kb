@@ -4,12 +4,40 @@ description: Rapid Application Development Framework
 layout: default
 ---
 
+# Using the Console
+
+Start the console using the `textual console` command as shown below. **NOTE** the `(textual) $` is just an indicator that the user is in a Python *venv* environment called *textual* (with the Textual packages installed):
+
+```
+(textual) $ textual console
+```
+
+Connect your app (e.g. `my_app.py`) to the console:
+
+```
+textual run --dev my_app.py
+```
+
+## Decreasing Verbosity
+
+Log messages are classififed into groups, and the -x flag can be used to exclude all message from a group. The groups are: EVENT, DEBUG, INFO, WARNING, ERROR, PRINT, SYSTEM, LOGGING and WORKER. The group a message belongs to is printed after its timestamp.
+
+Multiple groups may be excluded, for example to exclude everything except warning, errors, and print statements:
+
+```
+textual console -x SYSTEM -x EVENT -x DEBUG -x INFO
+```
+
+---
+
 # Links
 
 * [Textual Homepage](https://textual.textualize.io/)
-  * [Guide](https://textual.textualize.io/guide/)
+* Guide
     * [Devtools](https://textual.textualize.io/guide/devtools/)
+# Widgets
     * [Builtin Widgets](https://textual.textualize.io/widgets/)
+    * [Tabs](https://textual.textualize.io/widgets/tabs/)
 
 ## Open Source Textual Apps
 

@@ -166,6 +166,19 @@ git push origin main --tags
 
 ---
 
+# Test-PyPI
+
+To install a package from [test.pypi.org](https://test.pypi.org/), you'll likely need to tell Pip to install the dependencies from the main repository. E.g.
+
+```
+pip install --no-cache-dir \
+  --index-url https://test.pypi.org/simple/ \
+  --extra-index-url https://pypi.org/simple \
+  db4e==0.1.1
+```
+
+---
+
 # Links
 
 * [PyPI Homepage](https://pypi.org/)
