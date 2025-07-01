@@ -36,6 +36,7 @@ textual console -x SYSTEM -x EVENT -x DEBUG -x INFO
   * [Builtin Widgets](https://textual.textualize.io/widgets/)
   * [Devtools](https://textual.textualize.io/guide/devtools/)
   * [Events and Messages](https://textual.textualize.io/guide/events/)
+  * [MarkdownViewer](https://textual.textualize.io/widgets/markdown_viewer/)
   * [Tabs](https://textual.textualize.io/widgets/tabs/)
 
 ## Open Source Textual Apps
