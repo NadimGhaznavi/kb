@@ -35,6 +35,7 @@ textual console -x SYSTEM -x EVENT -x DEBUG -x INFO
 * [Textual Homepage](https://textual.textualize.io/)
   * [Devtools](https://textual.textualize.io/guide/devtools/)
   * [Events and Messages](https://textual.textualize.io/guide/events/)
+* [Rich on GitHub](https://github.com/Textualize/rich) - Python library for rich text and beautiful formatting 
 
 ## Textual Widgets
 
@@ -44,10 +45,6 @@ textual console -x SYSTEM -x EVENT -x DEBUG -x INFO
 * [ContentSwitcher](https://textual.textualize.io/widgets/content_switcher/)
 * [MarkdownViewer](https://textual.textualize.io/widgets/markdown_viewer/)
 * [Tabs](https://textual.textualize.io/widgets/tabs/)
-
-## Rich
-
-* [Rich on GitHub](https://github.com/Textualize/rich) - Python library for rich text and beautiful formatting 
 
 ## Open Source Textual Apps
 

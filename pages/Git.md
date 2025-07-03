@@ -51,6 +51,14 @@ git checkout -b textual-snake
 
 ---
 
+# Change to a Branch
+
+```
+git checkout new_branch
+```
+
+---
+
 # Checkout by Commit Tag
 
 ```
