@@ -3,11 +3,6 @@ title: Db4E Git Branching and Release Workflow
 layout: default
 ---------------
 
-<script type="module">
-  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
-  mermaid.initialize({ startOnLoad: true });
-</script>
-
 # 📦 Db4E Development to Release Workflow
 
 This document outlines the recommended Git branching and release workflow for the **Db4E** project. It ensures that development is organized, the main branch stays production-ready, and releases are clean and well-documented.
