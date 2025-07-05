@@ -9,7 +9,7 @@ layout: default
 
 This document outlines the recommended Git branching and release workflow for the **Db4E** project. It ensures that development is organized, the main branch stays production-ready, and releases are clean and well-documented.
 
-<div class="mermaid">
+```mermaid
 gitGraph
    commit id: "Initial commit"
    branch development
@@ -50,7 +50,7 @@ gitGraph
    tag "v0.16.1"
    checkout development
    merge hotfix/fix-typo
-</div>
+```
 
 ---
 
@@ -65,7 +65,3 @@ gitGraph
 ---
 
 Happy Hacking 👨💻👩🖥️ 
-
-<script type="module">
-  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
-</script>
