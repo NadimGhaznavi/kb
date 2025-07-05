@@ -11,6 +11,11 @@ layout: default
 	});
 </script>
 
+<pre class="mermaid">
+flowchart TD
+     A-->B
+</pre>
+
 # 📦 Db4E Development to Release Workflow
 
 This document outlines the recommended Git branching and release workflow for the **Db4E** project. It ensures that development is organized, the main branch stays production-ready, and releases are clean and well-documented.
