@@ -3,19 +3,7 @@ title: Git
 layout: default
 ---
 
-# Table of Contents
-
-* [Print a List of Repository Changes](#print-a-list-of-repository-commits)
-* [See the Details of a Commit](#see-dthe-details-of-a-commit)
-* [Undo a Git Commit](#undo-git-commit)
-* [Checkout by Commit Tag](#checkout-by-commit-tag)
-* [Clone a repository](#clone-a-repository)
-* [Clone the Wiki site for a repository](#clone-the-wiki-site-for-a-repository)
-* [Setup SSH Authentication with GitHub](#configure-a-local-repository-to-use-ssh-authentication-with-github)
-
----
-
-# Print a List of Repository Changes
+# List of Repository Changes
 
 Changes in git are *commits*, the command below shows the *commit tag* and *commit message*.
 
@@ -25,7 +13,7 @@ git log --oneline
 
 ---
 
-# See the Details of a Commit
+# Retrieve Past Commit Info
 
 Use the Git *commit tag*. See the [Print a List of Repository Changes](#print-a-list-of-repository-commits) section to get a list of commit tags.
 
@@ -50,7 +38,7 @@ git checkout -b textual-snake
 ```
 ---
 
-# Merging a Branch into Main
+# Merging a Branch 
 
 Assuming you are on the *project_webite_updates* branch:
 
@@ -67,6 +55,22 @@ Then:
 git checkout main
 git merge project_website_updates
 git push origin main
+```
+
+---
+
+# Delete a Branch
+
+To delete a branch you have in your local repo:
+
+```
+git branch -d project_website_updates
+```
+
+To delete a branch you *don't* have in your local repo, but is in the remote repo:
+
+```
+git push origin --delete project_website_updates
 ```
 
 ---
@@ -111,7 +115,7 @@ git clone --recursive https://github.com/SChernykh/p2pool
 
 ---
 
-# Clone the Wiki site for a repository
+# Clone a Repo Wiki Site
 
 ```
 git clone git@github.com:YOUR_USERNAME/YOUR_REPOSITORY.wiki.git
@@ -119,7 +123,7 @@ git clone git@github.com:YOUR_USERNAME/YOUR_REPOSITORY.wiki.git
 
 ---
 
-# Setup SSH authentication with GitHub
+# Setup SSH Authentication 
 
 ```
 git remote set-url origin git@github.com:NadimGhaznavi/kb.wiki.git
