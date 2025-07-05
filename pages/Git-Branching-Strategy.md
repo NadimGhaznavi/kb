@@ -5,7 +5,7 @@ layout: default
 
 This document outlines the recommended Git branching and release workflow for the **Db4E** project. It ensures that development is organized, the main branch stays production-ready, and releases are clean and well-documented.
 
-![strategy image](/img/git-branch-strategy.svg)
+![strategy image](/img/git-branch-strategy.png)
 
 ---
 
