@@ -48,6 +48,26 @@ git revert f814dd7
 ```
 git checkout -b textual-snake
 ```
+---
+
+# Merging a Branch into Main
+
+Assuming you are on the *project_webite_updates* branch:
+
+```
+$ git branch
+db4e-os
+main
+* project_website_updates
+```
+
+Then:
+
+```
+git checkout main
+git merge project_website_updates
+git push origin main
+```
 
 ---
 
