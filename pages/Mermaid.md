@@ -83,4 +83,4 @@ sequenceDiagram
 
 * [Getting Started](https://mermaid.js.org/intro/getting-started.html)
 * [Mermaid Live Editor](https://mermaid.live/)
-
+* [Mermaid Test Page](/pages/Mermaid-Test.html)
