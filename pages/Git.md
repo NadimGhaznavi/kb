@@ -51,6 +51,17 @@ git checkout -b textual-snake
 
 ---
 
+# Doing a Release
+
+```
+git add .
+git commit -m "Your commit message"
+git tag -a v0.15.8 -m "Release v0.15.8"
+git push origin main --tags
+```
+
+---
+
 # Change to a Branch
 
 ```
