@@ -37,6 +37,7 @@ This site is a personal knowledge base. It contains basic reference material tha
 * [GitHub](/pages/GitHub.html) - All things GitHub
 * [GitHub Flavored Markdown](/pages/GitHub-Flavored-Markdown.html) - Used by GitHub Pages 
 * [Git](/pages/Git.html) - Version control
+* [Git Branching Strategy](/pages/Git-Branching-Strategy.html)
 
 ---
 
