@@ -5,45 +5,33 @@ layout: default
 
 # Diagram
 
+In the example below, the current project release is v1.2.3.
+
   <pre class="mermaid">
     gitGraph
-    commit id: "Initial commit"
-    branch development
-    checkout development
-    commit id: "Start development"
-    branch feature/install-mgr
-    checkout feature/install-mgr
-    commit id: "Add InstallMgr module"
-    commit id: "Write tests"
-    checkout development
-    merge feature/install-mgr
-    commit id: "Merge feature: InstallMgr"
+    commit id: " "
+    branch dev
+    checkout dev
+    commit id: "  "
+    branch feature/foo
+    checkout feature/foo
+    commit id: "Add foo feature"
+    commit id: "Add foo tests"
+    checkout dev
+    merge feature/foo
+    commit id: "Merge feature: foo"
 
-    branch feature/pane-mgr
-    checkout feature/pane-mgr
-    commit id: "Add PaneMgr"
-    checkout development
-    merge feature/pane-mgr
-    commit id: "Merge feature: PaneMgr"
-
-    branch release/v0.16.0
-    checkout release/v0.16.0
-    commit id: "Prepare release v0.16.0"
-    commit id: "Bump version to 0.16.0" tag: "v0.16.0"
+    branch release/v1.2.4
+    checkout release/v1.2.4
+    commit id: "Update toml version"  tag: "v1.2.4"
+    checkout dev
+    merge release/v1.2.4
     checkout main
-    merge release/v0.16.0
-    
+    merge release/v1.2.4
 
-    checkout development
-    merge release/v0.16.0
-
-    branch hotfix/fix-typo
-    checkout hotfix/fix-typo
-    commit id: "Fix typo in README" tag: "v0.16.1"
-    checkout main
-    merge hotfix/fix-typo
-    checkout development
-    merge hotfix/fix-typo    
+    commit id: "   "
+    checkout dev
+    commit id: "    "
   </pre>
   <script type="module">
     import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
@@ -64,17 +52,26 @@ layout: default
 
 # Basic Flow
 
-1) Create feature branches from development (or main if no development branch):
+1) All work happens within a *development* branch.
 
-  * Work on features or bug fixes.
-  * Write tests for your code.
-  * Keep commits atomic and focused.
+Create the dev branch:
 
-2) Merge feature branches into development:
+```
+git checkout -b dev
+```
 
-  * Run full test suite.
-  * Review code via Pull Requests.
-  * Fix any issues.
+2) A new branch is created off the dev branch for a feature.
+
+```
+git checkout -b feature/foo
+```
+
+2) Subsequent *feature* work (e.g. on *foo*) is done in the *feature/foo* branch. When the work is complete, the *feature/foo* branch is merged back into the *dev* branch.
+
+```
+git checkout dev
+git merge feature/foo
+```
 
 3) Create a release branch from development when ready:
 
