@@ -7,7 +7,7 @@ layout: default
 
 This document outlines the recommended Git branching and release workflow for the **Db4E** project. It ensures that development is organized, the main branch stays production-ready, and releases are clean and well-documented.
 
-```mermaid
+<div class="mermaid">
 gitGraph
    commit id: "Initial commit"
    branch development
@@ -48,9 +48,11 @@ gitGraph
    tag "v0.16.1"
    checkout development
    merge hotfix/fix-typo
-```
+</div>
 
-## 🔄 Summary
+---
+
+# 🔄 Summary
 
 * **`main`**: Always deployable. Tag releases from here.
 * **`development`**: Where all active development branches merge.
