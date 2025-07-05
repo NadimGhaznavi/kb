@@ -14,7 +14,7 @@ This site is a personal knowledge base. It contains basic reference material tha
 
 * [Jenkins](/pages/Jenkins.html) - Automation server
 * [journalctl](/pages/journalctl.html) - Linux system log viewer
-* [Mermaid](/pages/mermaid.html) - JavaScript diagraming markup
+* [Mermaid](/pages/Mermaid.html) - JavaScript diagraming markup
 * [MongoDb](/pages/MongoDb.html) - MongoDb no SQL semi-structured database
 * [Rasa](/pages/Rasa.html) - ML and AI development framework
 * [Tilix](/pages/Tilix.html) - Terminal emulator
