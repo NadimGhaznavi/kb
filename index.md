@@ -47,6 +47,7 @@ This site is a personal knowledge base. It contains basic reference material tha
 * [Advanced Python UI Frameworks Based on the Console](/pages/Advanced-Python-UI-Frameworks-Based-on-the-Console.html)
 * [Handling Floating Point Math with Python and MongoDb](/pages/Handling-Floating-Point-Math-with-Python-and-MongoDb.html)
 * [Model, View, Controller Pattern in Python](/pages/Model-View-Controller-Pattern-in-Python.html)
+* [Poetry](/pages/Poetry.html) - Packaging and Dependency Management
 * [Pygame](/pages/Pygame.html) - An advanced UI framework that is console based
 * [PyMongo](/pages/PyMongo.html) - Python library for accessing MongoDb
 * [PyPI](/pages/PyPI.html) - Python Package Index
@@ -54,7 +55,7 @@ This site is a personal knowledge base. It contains basic reference material tha
 * [Python Generator Functions](/pages/Python-Generator-Functions.html)
 * [Python-sqlite3](/pages/Python-sqlite3.html) - Python's SQLite module
 * [Simplistic Decorator Pattern in Python](/pages/Simplistic-Decorator-Pattern-in-Python.html)
-* [Textual](/pages/Textual.html) - AWESOME TUI Framework
+* [Textual](/pages/Textual.html) - AWESOME RAD TUI Framework
 * [Unit Testing With Python](/pages/Unit-Testing-With-Python.html)
 * [Urwid](/pages/Urwid.html) - Console based UI library
 
