@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: Keep a Changelog
 date: 2024-07-06
 ---
