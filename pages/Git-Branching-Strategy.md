@@ -84,6 +84,10 @@ The developer switches to the *feature/foo* branch where the development work is
 git checkout feature/foo
 ```
 
+---
+
+# Add and Commit Changes
+
 Once the work is complete, the changes are committed into the *feature/foo* branch.
 
 ```
@@ -91,6 +95,8 @@ git add . -v
 git commit -m "New foo feature"
 git push origin feature/foo
 ```
+
+---
 
 # Merge Feature Branch into Dev
 
@@ -116,10 +122,11 @@ git checkout -b release/v1.3.0
 git push origin release/v1.3.0
 ```
 
-Update the `pyproject.toml` and increase the version to 1.3.0.
+* Update the `pyproject.toml` and increase the version to 1.3.0.
+* Update the CHANGELOG.md to reflect the new release
 
 ```
-git add pyproject.toml
+git add pyproject.toml CHANGELOG.md
 git commit -m "Bump version to v1.3.0"
 git push origin release/v1.3.0
 ```
@@ -131,6 +138,15 @@ git checkout main
 git merge release/v1.3.0 -m "Release v1.3.0"
 git tag -a v0.17.5 -m "Release v0.17.5"
 git push origin main --tags
+```
+
+## Handling with Conflicts
+
+If you encounter a conflict, edit the file to create a correct version. Save it commit it:
+
+```
+git add docs/COOL-UNICODE.txt
+git commit
 ```
 
 ---
