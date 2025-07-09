@@ -5,9 +5,9 @@ layout: default
 
 # Introduction
 
-This document outlines a specification for adding human and machine readable meaning to commit messages. It is based on [Conventional Commits Specification](https://www.conventionalcommits.org/) and has been adopted by the [Db4E](https://github.com/NadimGhaznavi/Db4E), the [Database 4 Everything](https://db4e.osoyalce.com/) project.
+This document outlines a specification for adding human- and machine-readable meaning to commit messages. It is based on the [Conventional Commits Specification](https://www.conventionalcommits.org/) and has been adopted by [Db4E](https://github.com/NadimGhaznavi/Db4E), the [Database 4 Everything](https://db4e.osoyalce.com/) project.
 
-This convention dovetails with the [Semantic Versioning](http://semver.org/) specification, by describing the features, fixes, and breaking changes made in commit messages.
+This convention dovetails with the [Semantic Versioning](http://semver.org/) specification by describing the features, fixes, and breaking changes made in commit messages.
 
 ---
 
@@ -47,7 +47,7 @@ This improves readability in terminals and git tools.
 
 ---
 
-# Explain Why, not Just What
+# Why, not Just What
 
 The *diff* shows *what* changed. The message should give context on *why*.
 
@@ -73,13 +73,13 @@ fix: race condition on startup (#42)
 
 Use the following prefixes:
 
-* `feat:` A new feature.
-* `fix:` A bug fix.
-* `docs:` Documentation only changes.
-* `style:` Formatting changes, not code changes.
-* `refactor:` Code changes that neither fixes a bug nor adds a feature.
-* `test:` Adding or refactoring Tests.
-* `chore:` Build process or auxiliary tool changes.
+- `feat:` A new feature.
+- `fix:` A bug fix.
+- `docs:` Documentation only changes.
+- `style:` Formatting changes, not code changes.
+- `refactor:` Code changes that neither fixes a bug nor adds a feature.
+- `test:` Adding or refactoring Tests.
+- `chore:` Build process or auxiliary tool changes.
 
 For example:
 

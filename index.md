@@ -109,7 +109,7 @@ This site is a personal knowledge base. It contains basic reference material tha
 
 # Aquaponics
 
-* [Aquaponics Academy Podcast Series](https://www.youtube.com/playlist?list=PLAPahqrfGZZmUNzrQV0ZwKjUrmqq-Stqh)
+* Everything [Aquaponics](/pages/Aquaponics.html)
 
 ---
 

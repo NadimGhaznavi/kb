@@ -92,9 +92,11 @@ Once the work is complete, the changes are committed into the *feature/foo* bran
 
 ```
 git add . -v
-git commit -m "New foo feature"
+git commit -m "feat: Implement foo feature"
 git push origin feature/foo
 ```
+
+See the [Git Commit Standard](/pages/Git-Commit-Standard.html) for how git commit messages should be formatted.
 
 ---
 
@@ -130,6 +132,8 @@ git add pyproject.toml CHANGELOG.md
 git commit -m "Bump version to v1.3.0"
 git push origin release/v1.3.0
 ```
+
+---
 
 # Merge Release Branch into Main
 
