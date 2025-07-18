@@ -20,7 +20,7 @@ Keep the subject short and sweet, concise enough to read in one glance.
 ## Optional Paragraph
 
 The *diff* shows *what* changed. The message should give context on *why*.
-Using bullets or paragraphs helps organize details, especially for complex changes. Limit line length for terminals and git tools.
+Using bullets or paragraphs helps organize details, especially for complex changes. Limit line length for terminals and git tools. Insert a blank line after the subject line when creating paragraphs.
 
 ## Categories
 
@@ -54,21 +54,6 @@ via SSH, including secure key handling and connection retries.
 
 ```
 fix: do not display an empty health box
-```
-
----
-
-# Multiple Lines
-
-Separate the subject from the body with a blank line. Sample message:
-
-```
-Add support for remote monerod deployment
-
-Refactored the installer to handle remote nodes by:
-- Passing SSH keys securely
-- Adding retries on connection failures
-- Documenting usage in the README
 ```
 
 ---
