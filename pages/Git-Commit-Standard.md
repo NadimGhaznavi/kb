@@ -11,6 +11,29 @@ This convention dovetails with the [Semantic Versioning](http://semver.org/) spe
 
 ---
 
+# Prefix Categories
+
+Use the following prefixes:
+
+- `feat:` A new feature.
+- `fix:` A bug fix.
+- `docs:` Documentation only changes.
+- `style:` Formatting changes, not code changes.
+- `refactor:` Code changes that neither fixes a bug nor adds a feature.
+- `test:` Adding or refactoring Tests.
+- `chore:` Build process or auxiliary tool changes.
+
+For example:
+
+```
+feat: add support for remote monerod deployment
+
+This adds the ability to deploy monerod nodes on remote machines
+via SSH, including secure key handling and connection retries.
+```
+
+---
+
 # Imperative Mood
 
 Write messages like a command:
@@ -59,35 +82,12 @@ Using bullets or paragraphs helps organize details, especially for complex chang
 
 ---
 
-# Reference Issues, Tickets, or PRs
+# Issues, Tickets and PRs
 
 Where applicable, include reference numbers to project issues, tickets or PRs. For example:
 
 ```
 fix: race condition on startup (#42)
-```
-
----
-
-# Prefix Categories
-
-Use the following prefixes:
-
-- `feat:` A new feature.
-- `fix:` A bug fix.
-- `docs:` Documentation only changes.
-- `style:` Formatting changes, not code changes.
-- `refactor:` Code changes that neither fixes a bug nor adds a feature.
-- `test:` Adding or refactoring Tests.
-- `chore:` Build process or auxiliary tool changes.
-
-For example:
-
-```
-feat: add support for remote monerod deployment
-
-This adds the ability to deploy monerod nodes on remote machines
-via SSH, including secure key handling and connection retries.
 ```
 
 ---

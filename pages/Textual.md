@@ -35,7 +35,10 @@ textual console -x SYSTEM -x EVENT -x DEBUG -x INFO
 * [Textual Homepage](https://textual.textualize.io/)
   * [Devtools](https://textual.textualize.io/guide/devtools/)
   * [Events and Messages](https://textual.textualize.io/guide/events/)
-* [Rich on GitHub](https://github.com/Textualize/rich) - Python library for rich text and beautiful formatting 
+  * [Textual on Discord](https://discord.gg/Enf6Z3qhVr)
+  * [Refreshing a Region](https://textual.textualize.io/guide/widgets/#region-updates)
+* [Rich on GitHub](https://github.com/Textualize/rich) - Python library for rich text and beautiful formatting
+  * [Tables](https://rich.readthedocs.io/en/latest/tables.html)
 
 ## Textual Widgets
 
