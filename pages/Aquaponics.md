@@ -12,11 +12,10 @@ layout: default
 
 # Filters
 
-Radial flow work better.
+From [Radial Flow Settler for Aquaponics Systems](https://www.youtube.com/watch?v=sBCC9tMsleY) by [Rob Bob](https://www.youtube.com/@RobsAquaponics). Long story short; radial flow filters work better and are simpler.
 
 ![Radial Flow and Swirl Filters](/img/aquaponics-filters.png)
 
-From [Radial Flow Settler for Aquaponics Systems | How RFS work - How to Size Your RFS](https://www.youtube.com/watch?v=sBCC9tMsleY) by [Rob Bob](https://www.youtube.com/@RobsAquaponics).
 
 ---
 
