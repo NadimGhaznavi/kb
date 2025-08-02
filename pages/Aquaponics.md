@@ -37,3 +37,5 @@ Bell Siphon.
 
 * [Pod Hotel](https://www.bulkreefsupply.com/pod-hotel-clear-water.html?srsltid=AfmBOopZ1hElKwiksqQ6QyrEI8W4aYyj-QC9Lt8W70OFHTFjwPNFbWnj)
 * [Aquaponics Academy Podcast Series](https://www.youtube.com/playlist?list=PLAPahqrfGZZmUNzrQV0ZwKjUrmqq-Stqh)
+* [Radial Flow Settler for Aquaponics Systems](https://www.youtube.com/watch?v=sBCC9tMsleY) by [Rob Bob](https://www.youtube.com/@RobsAquaponics) 
+* [Afnan Aquaponics](http://afnan-aquaponics.blogspot.com)
