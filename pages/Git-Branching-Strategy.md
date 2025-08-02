@@ -124,8 +124,9 @@ git checkout -b release/v1.3.0
 git push origin release/v1.3.0
 ```
 
-* Update the `pyproject.toml` and increase the version to 1.3.0.
-* Update the CHANGELOG.md to reflect the new release
+* Update the verstion in the `pyproject.toml` to reflect the new release7
+* Update the `CHANGELOG.md` to reflect the changes that went into new release
+* Update the `DB4E_VERSION_DEFAULT` setting in the`Constants/Defaults.py` file
 
 ```
 git add pyproject.toml CHANGELOG.md
