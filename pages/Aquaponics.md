@@ -8,11 +8,17 @@ layout: default
 * [Amphipods](https://en.wikipedia.org/wiki/Amphipoda)
 * [Copepods](https://en.wikipedia.org/wiki/Copepod)
 
-# Radial Flow and Swirl Filters
+---
+
+# Filters
 
 Radial flow work better.
 
 ![Radial Flow and Swirl Filters](/img/aquaponics-filters.png)
+
+From [Radial Flow Settler for Aquaponics Systems | How RFS work - How to Size Your RFS](https://www.youtube.com/watch?v=sBCC9tMsleY) by [Rob Bob](https://www.youtube.com/@RobsAquaponics).
+
+---
 
 # Links
 
