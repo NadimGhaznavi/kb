@@ -58,6 +58,7 @@ This site is a personal knowledge base. It contains basic reference material tha
 * [Python Generator Functions](/pages/Python-Generator-Functions.html)
 * [Python-sqlite3](/pages/Python-sqlite3.html) - Python's SQLite module
 * [Simplistic Decorator Pattern in Python](/pages/Simplistic-Decorator-Pattern-in-Python.html)
+* [Testing with uv and nox](/pages/Testing-with-uv-and-nox.html)
 * [Textual](/pages/Textual.html) - AWESOME RAD TUI Framework
 * [Unit Testing With Python](/pages/Unit-Testing-With-Python.html)
 * [Urwid](/pages/Urwid.html) - Console based UI library
