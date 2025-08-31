@@ -10,6 +10,12 @@ layout: default
 
 ---
 
+# Plants from Seed
+
+* [VIdeo](https://www.youtube.com/watch?v=YzyuVzxcKMs)
+
+---
+
 # Filters
 
 From [Radial Flow Settler for Aquaponics Systems](https://www.youtube.com/watch?v=sBCC9tMsleY) by [Rob Bob](https://www.youtube.com/@RobsAquaponics). Long story short; radial flow filters work better and are simpler.

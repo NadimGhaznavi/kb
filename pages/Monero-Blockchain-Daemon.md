@@ -7,7 +7,7 @@ layout: default
 
 * [Introduction and Scope](#introduction-and-scope)
 * [Interactive Commands](#interactive-commands)
-* [Import Tool)(#import-tool)
+* [Import Tool](#import-tool)
 * [Links](#links)
 
 ---

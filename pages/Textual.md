@@ -57,3 +57,4 @@ textual console -x SYSTEM -x EVENT -x DEBUG -x INFO
 * [Posting](https://github.com/darrenburns/posting) - The API client that lives in your terminal
 * [Memray](https://github.com/bloomberg/memray) - Memory profiler
 * [Toolong](https://github.com/textualize/toolong) - View, tail, merge, and search logs
+* [Textual Games](https://github.com/edward-jazzhands/textual-games) - By Edward Jazzhands
