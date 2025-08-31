@@ -91,6 +91,7 @@ bin/monero-blockchain-import --data-dir /opt/prod/monero-blockchain \
 
 # Links
 
+* [Building from Source](/pages/Building-Monerod-from-Source.html)
 * [Monero Homepage](https://www.getmonero.org/)
 * [Monero Source Code on GitHub](https://github.com/monero-project/monero-gui)
 * [Building Monerod from Source](https://xmr.osoyalce.com/pages/Building-Monerod-from-Source.html)

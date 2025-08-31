@@ -12,4 +12,5 @@ sudo apt install libhwloc15
 
 # Links
 
+* [Building from Source](/pages/Building-XMRig-from-Source.html)
 * [XMRig on GitHub](https://github.com/xmrig/xmrig)
