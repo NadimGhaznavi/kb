@@ -64,7 +64,7 @@ I am installing version **0.18.4.0** of the software. The directory name I use r
 
 ```
 cd /opt/src
-sudo git clone --recursive https://github.com/monero-project/monero-gui
+sudo git clone --depth=1 --recursive https://github.com/monero-project/monero-gui
 sudo mv monero-gui monerod-0.18.4.0
 ```
 
