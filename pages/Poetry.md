@@ -27,3 +27,15 @@ Use the `-v` flag. E.g.
 poetry run pytest -v 
 poetry run pytest -v tests/Modules/test_InstallMgr.py
 ```
+
+---
+
+# Upgrading a Dependency
+
+This example shows how to upgrade from Textual 4.0.0 to 6.0.0.
+
+Edit the `pyproject.toml` file and change the `textual = "^4.0.0"` to `textual = "^6.0.0"`.
+
+Then run `poetry update textual`
+
+Verify with a `poetry show textual`
