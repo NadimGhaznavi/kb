@@ -128,3 +128,86 @@ git clone git@github.com:YOUR_USERNAME/YOUR_REPOSITORY.wiki.git
 ```
 git remote set-url origin git@github.com:NadimGhaznavi/kb.wiki.git
 ```
+
+---
+
+# Dealing with a Bad Commit
+
+## Finding which Commit for a File
+
+```
+git log --oneline -- test_logs/p2pool.log
+```
+
+Sample output:
+
+```
+96293b8 feat: P2Pool log watcher
+```
+
+## Commit History
+
+We need to figure out where in the commit history that commit happened:
+
+```
+git log --oneline
+```
+
+Sample output:
+
+```
+b996205 (HEAD -> feature/p2pool-stdin) chore: add sample logs
+fdc79d5 chore: ignore test_logs directory
+96293b8 feat: P2Pool log watcher
+a0b5bd9 (origin/feature/p2pool-stdin) feat: Hook in P2Pool log watcher
+260644c chore: Reformatted code
+2fbac18 fixed: Remove broken logging reference
+```
+
+## Interactive Rebase
+
+The bad commit was 3 commits back...
+
+```
+git rebase -i 96293b8^
+```
+
+This will open an editor with something like:
+
+```
+pick a0b5bd9 feat: Hook in P2Pool log watcher
+pick 96293b8 feat: P2Pool log watcher
+pick fdc79d5 chore: ignore test_logs directory
+pick b996205 chore: add sample logs
+```
+
+Change the offending commit (96293b8) line to:
+
+```
+pick a0b5bd9 feat: Hook in P2Pool log watcher
+edit 96293b8 feat: P2Pool log watcher
+pick fdc79d5 chore: ignore test_logs directory
+pick b996205 chore: add sample logs
+```
+
+Then save and quit the editor.
+
+In this example a HUGE file was accidently committed.
+
+```
+git rm --cached test_logs/p2pool.log
+git commit --amend --no-edit
+git rebase --continue
+```
+
+Finally, do a push to totally sync things up:
+
+```
+git push --force origin feature/p2pool-stdin
+```
+
+Now your environment should be clean.
+
+
+
+
