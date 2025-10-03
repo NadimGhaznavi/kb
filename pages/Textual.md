@@ -42,6 +42,7 @@ textual console -x SYSTEM -x EVENT -x DEBUG -x INFO
 
 ## Textual Widgets
 
+* [Textual-plot](https://pypi.org/project/textual-plot/)
 * [Builtin Widgets](https://textual.textualize.io/widgets/)
 * [Widget Gallery](https://textual.textualize.io/widget_gallery/)
 
