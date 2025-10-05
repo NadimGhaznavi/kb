@@ -39,3 +39,15 @@ Edit the `pyproject.toml` file and change the `textual = "^4.0.0"` to `textual =
 Then run `poetry update textual`
 
 Verify with a `poetry show textual`
+
+---
+
+# Adding a New Module
+
+Add the module to your `pyproject.toml` file: E.g.
+
+```
+textual-plotext = "^1.0.1"
+```
+
+Then run `poetry lock ; poetry install`.

@@ -209,5 +209,10 @@ git push --force origin feature/p2pool-stdin
 Now your environment should be clean.
 
 
+# See All Action
 
+To see all commits on all branches:
 
+```
+git log --all --graph --decorate --oneline
+```
