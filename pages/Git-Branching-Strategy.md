@@ -154,6 +154,13 @@ git add docs/COOL-UNICODE.txt
 git commit
 ```
 
+Then tag and push:
+
+```
+git tag -a v0.17.5 -m "Release v0.17.5"
+git push origin main --tags
+```
+
 ---
 
 # Merge Release Branch into Dev
