@@ -66,6 +66,28 @@ poetry run sphinx-build -b html docs docs/_build/html
 
 ---
 
+# Sample Inline Docstrings
+
+Here is a sample inline docstring:
+
+```
+def get_random_ingredients(kind=None):
+    """
+    Return a list of random ingredients as strings.
+
+    :param kind: Optional "kind" of ingredients.
+    :type kind: list[str] or None
+    :raise lumache.InvalidKindError: If the kind is invalid.
+    :return: The ingredients list.
+    :rtype: list[str]
+
+    """
+    return ["shells", "gorgonzola", "parsley"]
+
+```
+
+---
+
 # GitHub Workflow
 
 The workflow below generates the documentation automatically when a new release is cut.
