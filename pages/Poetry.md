@@ -51,3 +51,17 @@ textual-plotext = "^1.0.1"
 ```
 
 Then run `poetry lock ; poetry install`.
+
+---
+
+# Check the pyproject.toml File
+
+```
+poetry check
+```
+
+---
+
+# Links
+
+* [Poety Homepage](https://python-poetry.org/)
