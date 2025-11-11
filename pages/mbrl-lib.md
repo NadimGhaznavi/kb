@@ -15,3 +15,4 @@ layout: default
 ## PETS Algorithm
 - [Deep RL using Probabilistic Dynamics Models Pape](https://arxiv.org/pdf/1805.12114)
 - [Tackling Cartpole with PETS using mbrl-lib](https://github.com/facebookresearch/mbrl-lib/blob/main/notebooks/pets_example.ipynb) and [Hydra](https://hydra.cc/docs/intro/).
+- [When to Trust Your Model: Model-Based Policy Optimization](https://arxiv.org/abs/1906.08253)
