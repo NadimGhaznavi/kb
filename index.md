@@ -51,6 +51,7 @@ This site is a personal knowledge base. It contains basic reference material tha
 * [Asciimatics](/pages/Asciimatics.html) - Console based UI library
 * [Advanced Python UI Frameworks Based on the Console](/pages/Advanced-Python-UI-Frameworks-Based-on-the-Console.html)
 * [Handling Floating Point Math with Python and MongoDb](/pages/Handling-Floating-Point-Math-with-Python-and-MongoDb.html)
+* [Hydra](/pages/Hydra.html) - Job Scheduling and Configuration Management
 * [MBRL-Lib](/pages/mbrl-lib.html) - Model-Based Reinforcement Learning Library
 * [Model, View, Controller Pattern in Python](/pages/Model-View-Controller-Pattern-in-Python.html)
 * [PIP](/pages/PIP.html) - PIP installs Packages

@@ -13,4 +13,5 @@ layout: default
 - [mbrl-lib documentation](https://github.com/facebookresearch/mbrl-lib/blob/main/docs/index.rst)
 
 ## PETS Algorithm
-- [Deep Reinforcement Learning in a Handful of Trials using Probabilistic Dynamics Models](https://arxiv.org/pdf/1805.12114)
+- [Deep RL using Probabilistic Dynamics Models Pape](https://arxiv.org/pdf/1805.12114)
+- [Tackling Cartpole with PETS using mbrl-lib](https://github.com/facebookresearch/mbrl-lib/blob/main/notebooks/pets_example.ipynb) and [Hydra](https://hydra.cc/docs/intro/).
