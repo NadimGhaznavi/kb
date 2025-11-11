@@ -4,11 +4,13 @@ layout: default
 ---
 
 ![Hydra Logo](/img/hydra.svg)
+
 ---
+
+# Hydra-Zen
 
 ![Hydra-Zen Logo](/img/hydra-zen.png)
 
-# Hydra-Zen
 * [Hydra-Zen](https://github.com/mit-ll-responsible-ai/hydra-zen?tab=readme-ov-file)
 
 ---
