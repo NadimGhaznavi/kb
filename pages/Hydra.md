@@ -3,6 +3,14 @@ title: Hydra - Job Scheduling and Configuration Management
 layout: default
 ---
 
+![Hydra Logo](/img/hydra.svg)
+---
+
+![Hydra-Zen Logo](/img/hydra-zen.png)
+
+# Hydra-Zen
+* [Hydra-Zen](https://github.com/mit-ll-responsible-ai/hydra-zen?tab=readme-ov-file)
+
 ---
 
 # Links
@@ -14,5 +22,6 @@ layout: default
 ---
 
 # Examples
+
 - [Keep Track of your Experiments with Hydra](https://towardsdatascience.com/keep-track-of-your-experiments-with-hydra-b29937a99fc9/)
 - [Tackling Cartpole with PETS using mbrl-lib](https://github.com/facebookresearch/mbrl-lib/blob/main/notebooks/pets_example.ipynb) and [Hydra](https://hydra.cc/docs/intro/).
