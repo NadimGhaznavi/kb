@@ -67,6 +67,7 @@ This site is a personal knowledge base. It contains basic reference material tha
 * [Textual](/pages/Textual.html) - AWESOME RAD TUI Framework
 * [Unit Testing With Python](/pages/Unit-Testing-With-Python.html)
 * [Urwid](/pages/Urwid.html) - Console based UI library
+* [ZeroMQ](/pages/ZeroMQ.html) - Rich MQ-Style messaging framework
 
 ---
 

@@ -20,6 +20,7 @@ layout: default
 * [Hydra Homepage](https://hydra.cc/docs/intro/)
 * [Hydra on GitHub](https://github.com/facebookresearch/hydra)
 * [Hydra Tutorial](https://towardsdatascience.com/keep-track-of-your-experiments-with-hydra-b29937a99fc9/)
+* [Create and Launch a Basic App with Hydra](https://mit-ll-responsible-ai.github.io/hydra-zen/tutorials/basic_app.html)
 
 ---
 
