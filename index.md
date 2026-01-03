@@ -125,3 +125,6 @@ This site is a personal knowledge base. It contains basic reference material tha
 
 * [Carrot Cheatsheet](/pages/Carrot-Cheatsheet.html)
 
+# RFC 2119
+
+* [Key words for use in RFCs to Indicate Requirement Levels](https://datatracker.ietf.org/doc/html/rfc2119)
