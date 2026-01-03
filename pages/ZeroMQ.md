@@ -5,18 +5,18 @@ layout: default
 
 # Examples
 
-A complete list of examples can be found [here.](http://github.com/zeromq/pyzmq/tree/f8b051b0ed7f1170918014610e2fe3a606509c6b/examples)
+A complete list of examples can be found [here](http://github.com/zeromq/pyzmq/tree/f8b051b0ed7f1170918014610e2fe3a606509c6b/examples).
 
 ## [Heartbeat](https://github.com/zeromq/pyzmq/tree/f8b051b0ed7f1170918014610e2fe3a606509c6b/examples/heartbeat)
 
-### Heart
+### [Heart](https://github.com/zeromq/pyzmq/blob/f8b051b0ed7f1170918014610e2fe3a606509c6b/examples/heartbeat/heart.py)
 
 This launches an echoing rep socket device, and runs a blocking numpy action. The rep socket should remain responsive to pings during this time. Use heartbeater.py to ping this heart, and see the responsiveness.
     
-- Source code: [heart.py](https://github.com/zeromq/pyzmq/blob/f8b051b0ed7f1170918014610e2fe3a606509c6b/examples/heartbeat/heart.py)
+- Source code: [heart.py]
 
 
-### Heartbeater
+### [Heartbeater](https://github.com/zeromq/pyzmq/blob/f8b051b0ed7f1170918014610e2fe3a606509c6b/examples/heartbeat/heartbeater.py)
 
 For use with heart.py
 
@@ -25,7 +25,7 @@ are tracked based on their DEALER identities.
 
 You can start many hearts with heart.py, and the heartbeater will monitor all of them, and notice when they stop responding.
 
-- Source code : [heartbeater.py](https://github.com/zeromq/pyzmq/blob/f8b051b0ed7f1170918014610e2fe3a606509c6b/examples/heartbeat/heartbeater.py)
+
 
 
 
