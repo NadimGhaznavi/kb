@@ -42,6 +42,7 @@ This site is a personal knowledge base. It contains basic reference material tha
 * [Git Branching Strategy](/pages/Git-Branching-Strategy.html)
 * [Git Commit Message Standard](/pages/Git-Commit-Standard.html)
 * [Keeping a Changelog](/pages/Keeping-a-Changelog.html)
+* [reStructuredText](/pages/reStructuredText.html)
 * [Sphinx](/pages/Sphinx.html) - Documentation generator
 
 ---
