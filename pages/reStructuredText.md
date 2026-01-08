@@ -6,6 +6,7 @@ layout: default
 
 # Links
 
+- [Authoritative RST Docs on SourceForce](https://docutils.sourceforge.io/rst.html)
 - [reStructureText Markup Specification](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html)
 - [Sphinx ReStructureText Homepage](https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html)
   - [reStructuredText Primer](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#restructuredtext-primer)
