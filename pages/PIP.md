@@ -1,5 +1,5 @@
 ---
-title: Pip
+title: PIP
 description: PIP installs Packages
 ---
 
