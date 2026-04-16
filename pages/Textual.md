@@ -40,6 +40,7 @@ textual console -x SYSTEM -x EVENT -x DEBUG -x INFO
   * [Colors](https://textual.textualize.io/api/color/)
 * [Rich on GitHub](https://github.com/Textualize/rich) - Python library for rich text and beautiful formatting
   * [Tables](https://rich.readthedocs.io/en/latest/tables.html)
+  * [Colors](https://rich.readthedocs.io/en/stable/appendix/colors.html)
 
 ## Textual Widgets
 
