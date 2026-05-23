@@ -75,8 +75,8 @@ This site is a personal knowledge base. It contains basic reference material tha
 
 # JavaScript
 
-* [ApexCharts](/pages/Apex-Charts.html) - JavaScript Charts
-* [Plotly](/pages/Plotly.html)
+* [ApexCharts](/pages/Apex-Charts.html) - Plots with a Javascript API
+* [Plotly](/pages/Plotly.html) - More plots with a Javascript API
 
 ---
 
