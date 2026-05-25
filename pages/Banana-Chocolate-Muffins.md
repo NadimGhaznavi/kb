@@ -3,6 +3,10 @@ title: Banana Chocolate Muffins
 layout: default
 ---
 
+![Banana Chocolate Muffins](/img/banana-choc-muffins-01.jpg)
+
+---
+
 # Ingredients
 
 The vanilla is optional, wet or dry, or both! 
@@ -39,3 +43,7 @@ The vanilla is optional, wet or dry, or both!
 - Add the batter.
 
 Bake for 18 to 20 minutes.
+
+---
+
+![Banana Chocolate Muffins](/img/banana-choc-muffins-02.jpg)
