@@ -38,7 +38,7 @@ Plotly's Python graphing library makes interactive, publication-quality graphs; 
       - [Funnel](https://plotly.com/python-api-reference/generated/plotly.graph_objects.Funnel.html#plotly.graph_objects.Funnel)
       - [Funnelarea](https://plotly.com/python-api-reference/generated/plotly.graph_objects.Funnelarea.html#plotly.graph_objects.Funnelarea)
       - [Indicator](https://plotly.com/python-api-reference/generated/plotly.graph_objects.Indicator.html#plotly.graph_objects.Indicator)
-    - **3D Traces**
+      - **3D Traces**
       - [Scatter3d](https://plotly.com/python-api-reference/generated/plotly.graph_objects.Scatter3d.html#plotly.graph_objects.Scatter3d)
       - [Surface](https://plotly.com/python-api-reference/generated/plotly.graph_objects.Surface.html#plotly.graph_objects.Surface)
       - [Mesh3d](https://plotly.com/python-api-reference/generated/plotly.graph_objects.Mesh3d.html#plotly.graph_objects.Mesh3d)
