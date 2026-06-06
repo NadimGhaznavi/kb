@@ -127,6 +127,7 @@ This site is a personal knowledge base. It contains basic reference material tha
 # Recipes
 
 * [Banana Chocolate Muffins](/pages/Banana-Chocolate-Muffins.html)
+* [Waffles](/pages/Waffles.html)
 
 ---
 
