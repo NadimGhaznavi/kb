@@ -50,3 +50,4 @@ You need to add *chelated iron* to your water as it's one essential element that
 - [Radial Flow Settler for Aquaponics Systems](https://www.youtube.com/watch?v=sBCC9tMsleY) by [Rob Bob](https://www.youtube.com/@RobsAquaponics) 
 - [Afnan Aquaponics](http://afnan-aquaponics.blogspot.com)
 - [Aquarium Direct](https://aquariumdirect.ca/)
+- [Growing Garlic in Water](https://www.youtube.com/watch?v=n56iz5Ph_pI)
