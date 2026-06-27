@@ -107,6 +107,7 @@ This site is a personal knowledge base. It contains basic reference material tha
 
 # Linux
 
+* [Bash snippets](/pages/Bash.html)
 * [Enabling Huge Page Support in Grub](/pages/Enabling-Huge-Page-Support-in-Grub.html)
 * [Configuring a Persistent WiFi Connection using WPA Supplicant](/pages/Configuring-a-Persistent-WiFi-Connection-using-WPA-Supplicant.html)
 * [Create-A-Container-Running-XMRig](/pages/Deploy-xmrig-on-a-container.html)
