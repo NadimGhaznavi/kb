@@ -111,6 +111,7 @@ This site is a personal knowledge base. It contains basic reference material tha
 * [Enabling Huge Page Support in Grub](/pages/Enabling-Huge-Page-Support-in-Grub.html)
 * [Configuring a Persistent WiFi Connection using WPA Supplicant](/pages/Configuring-a-Persistent-WiFi-Connection-using-WPA-Supplicant.html)
 * [Create-A-Container-Running-XMRig](/pages/Deploy-xmrig-on-a-container.html)
+* [GoDaddy CLI Tool](/pages/godaddy-cli.html)
 * [upnpc](/pages/upnpc.html) - Configuring Port Forwarding on your Router
 * [List Files Installed Files for a Debian Package](/pages/List-Files-Installed-Files-for-a-Debian-Package.html)
 * [HOWTO Enable and Disable the OS GUI](/pages/Howto-Enable-And-Disable-The-OS-GUI.html)
