@@ -80,10 +80,11 @@ This site is a personal knowledge base. It contains basic reference material tha
 
 ---
 
-# Configuration
+# Hardware
 
 * [Lexmark Printer Configuration](/pages/Lexmark-3224-DW-Printer.html)
 * [General TekSavvy Information](/pages/General-TekSavvy-Information.html)
+* [HP z440 Workstation](/pages/HP-z440-Workstation.html)
 
 ---
 
