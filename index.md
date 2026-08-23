@@ -13,6 +13,7 @@ This site is a personal knowledge base. It contains basic reference material tha
 # Misc. Software 
 
 * [Common Warehouse Metamodel](/pages/Common-Warehouse-Metamodel.html) - Modeling
+* [GoatCounter](/pages/GoatCounter.html) - Page counts
 * [Jenkins](/pages/Jenkins.html) - Automation server
 * [journalctl](/pages/journalctl.html) - Linux system log viewer
 * [Mermaid](/pages/Mermaid.html) - JavaScript diagraming markup
