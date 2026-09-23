@@ -16,6 +16,26 @@ rm -f godaddy-cli
 ln -s godaddy-cli-0.2.20 godaddy-cli
 ```
 
+## PAT Scopes
+
+The following table lists the Domains API scopes you can assign when generating a PAT. Each scope enables specific operations. A write-scoped token satisfies read operations for the same resource; a read-scoped token is refused on writes. Go to Generate a PAT for step-by-step instructions on how to generate a PAT.
+
+When you generate a token, the Domains & DNS bundle in the scope picker selects all scopes below. You can expand it to grant a subset instead.
+
+| Scope | Required to |
+| --- | --- |
+| `domains.domain:read` | Read domain records, availability, suggestions, quotes, and operations |
+| `domains.domain:create` | Register domains |
+| `domains.domain:update` | Modify domain settings |
+| `domains.domain:delete` | Delete or cancel domains |
+| `domains.dns:update` | Create, update, and delete DNS zone records |
+| `domains.nameserver:update` | Replace authoritative nameservers for a domain |
+| `domains.host:update` | Modify domain host records |
+| `domains.forward:update` | Configure domain forwarding |
+| `domains.contact:update` | Update registrant, admin, or tech contacts |
+| `domains.transfer:execute` | Initiate an inbound domain transfer |
+| `domains.transfer:update` | Modify a transfer in progress |
+
 ## Generate a GoDaddy PAT
 
 The following steps explain how to generate a PAT to authenticate GoDaddy API calls.
@@ -24,11 +44,11 @@ The following steps explain how to generate a PAT to authenticate GoDaddy API ca
 2. Click + Generate Token.
 3. In the Generate personal access token dialog, complete the following fields:
 
-| Field	     | Description	                           | Note
-|------------|-----------------------------------------|------------------------
-| Name       | Name for the token.	                   |
-| Expiration | Number of days until the token expires. |
-| Scopes     | Scopes for the token.                   | Go to [PAT scopes](https://developer.godaddy.com/docs/api-users/auth#pat-scopes) to see the available scopes.
+| Field	     | Description	                          
+|------------|----------------------------------------
+| Name       | Name for the token.	                  
+| Expiration | Number of days until the token expires.
+| Scopes     | Scopes for the token.                  
 
 4. Click Generate Token.
 
