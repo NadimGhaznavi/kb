@@ -12,6 +12,7 @@ This site is a personal knowledge base. It contains basic reference material tha
 
 # Misc. Software 
 
+* [Architecture Review Skill](/pages/Architecture-Review-Skill.html) - Installation and use in ChatGPT and Codex
 * [Common Warehouse Metamodel](/pages/Common-Warehouse-Metamodel.html) - Modeling
 * [GoatCounter](/pages/GoatCounter.html) - Page counts
 * [Jenkins](/pages/Jenkins.html) - Automation server
