@@ -127,7 +127,6 @@ author:
   location: "Hamilton, ON"
   email: "nghaznavi@gmail.com"
   links:
-  links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/NadimGhaznavi"
