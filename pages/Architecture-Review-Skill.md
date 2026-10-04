@@ -5,8 +5,6 @@ layout: single
 description: Where the Architecture Review skill is installed and how to use it in ChatGPT and Codex.
 ---
 
-# Architecture Review Skill
-
 **Architecture Review** (`review-architecture`) is a reusable skill for reviewing software designs, schema mappings, service boundaries, module structure, and generated code. It captures my approach as the architect overseeing implementation.
 
 A skill is a folder of instructions and supporting references that ChatGPT or Codex reads when performing a task. This one is instruction-based; it does not run a separate review server.

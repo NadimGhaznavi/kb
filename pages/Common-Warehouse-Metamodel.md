@@ -4,6 +4,14 @@ author_profile: true
 layout: single
 ---
 
+# Table of Contents
+{: .no_toc }
+
+* TOC
+{:toc}
+
+---
+
 # Core
 
 ![Core](/cwm/4_2-core.png)
@@ -28,13 +36,13 @@ layout: single
 
 ---
 
-# Instance - Eg
+# Instance - Example I
 
 ![Instance Example](/cwm/4_8-instance-eg.png)
 
 ---
 
-# Instance - Eg
+# Instance - Example II
 
 ![Instance Example](/cwm/4_9-instance-eg.png)
 
@@ -52,13 +60,13 @@ layout: single
 
 ---
 
-# Responsible Party - Eg
+# Responsible Party - Example I
 
 ![Responsible Party](/cwm/5_3-responsible-party-eg.png)
 
 ---
 
-# Responsible Party - Eg
+# Responsible Party - Example II
 
 ![Responsible Party](/cwm/5_4-responsible-party-eg.png)
 
