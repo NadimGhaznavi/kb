@@ -1,6 +1,7 @@
 ---
-title: ZODB ‐ Zope Object Database
-layout: default
+title: "ZODB ‐ Zope Object Database"
+author_profile: true
+layout: single
 ---
 
 # Introduction and Scope

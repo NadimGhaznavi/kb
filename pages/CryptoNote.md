@@ -1,6 +1,7 @@
 ---
-title: CryptoNote
-layout: default
+title: "CryptoNote"
+author_profile: true
+layout: single
 ---
 
 # Introduction and Scope

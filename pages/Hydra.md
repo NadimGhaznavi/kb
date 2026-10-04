@@ -1,6 +1,7 @@
 ---
-title: Hydra - Job Scheduling and Configuration Management
-layout: default
+title: "Hydra - Job Scheduling and Configuration Management"
+author_profile: true
+layout: single
 ---
 
 ![Hydra Logo](/img/hydra.svg)

@@ -1,6 +1,7 @@
 ---
-title: Plotly
-layout: default
+title: "Plotly"
+author_profile: true
+layout: single
 ---
 
 # Introduction and Scope

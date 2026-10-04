@@ -1,6 +1,7 @@
 ---
-title: Monero Blockchain Daemon
-layout: default
+title: "Monero Blockchain Daemon"
+author_profile: true
+layout: single
 ---
 
 # Table of Contents

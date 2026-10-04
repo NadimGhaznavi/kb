@@ -1,6 +1,7 @@
 ---
-title: Asciimatics
-layout: default
+title: "Asciimatics"
+author_profile: true
+layout: single
 ---
 
 # Introduction and Scope

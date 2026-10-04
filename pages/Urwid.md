@@ -1,6 +1,7 @@
 ---
-title: Urwid
-layout: default
+title: "Urwid"
+author_profile: true
+layout: single
 ---
 
 # Introduction and Scope

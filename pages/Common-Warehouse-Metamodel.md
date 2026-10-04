@@ -1,6 +1,7 @@
 ---
-title: Common Warehouse Metamodel
-layout: default
+title: "Common Warehouse Metamodel"
+author_profile: true
+layout: single
 ---
 
 # Core

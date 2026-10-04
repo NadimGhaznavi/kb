@@ -1,6 +1,7 @@
 ---
-title: Deploy xmrig on a container
-layout: default
+title: "Deploy xmrig on a container"
+author_profile: true
+layout: single
 ---
 
 # Introduction and Scope

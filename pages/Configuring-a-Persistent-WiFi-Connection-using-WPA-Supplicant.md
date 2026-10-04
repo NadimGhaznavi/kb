@@ -1,6 +1,7 @@
 ---
-title: Configuring a Persistent WiFi Connection using WPA Supplicant
-layout: default
+title: "Configuring a Persistent WiFi Connection using WPA Supplicant"
+author_profile: true
+layout: single
 ---
 
 Create a */etc/wpa_supplicant/wpa_supplicant.conf* file. If the *wpa_supplicant* directory doesn't exist it indicates that the WPA supplicant software is probably not installed. In this case, you can either install it or figure out what network configuraton services are already installed and use them instead (probably a better idea).

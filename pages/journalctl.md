@@ -1,6 +1,7 @@
 ---
-title: journalctl
-layout: default
+title: "journalctl"
+author_profile: true
+layout: single
 ---
 
 # Print today's output of journalctl's output

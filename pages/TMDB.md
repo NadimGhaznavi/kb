@@ -1,6 +1,7 @@
 ---
 title: "TMDB - The Movie DB"
-layout: default
+author_profile: true
+layout: single
 ---
 
 # Testing Access

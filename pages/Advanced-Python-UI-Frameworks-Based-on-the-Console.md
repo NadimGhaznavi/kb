@@ -1,6 +1,7 @@
 ---
-title: Advanced Python UI Frameworks Based on the Console
-layout: default
+title: "Advanced Python UI Frameworks Based on the Console"
+author_profile: true
+layout: single
 ---
 
 # Introduction and Scope

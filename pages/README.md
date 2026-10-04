@@ -1,6 +1,7 @@
 ---
-title: README
-layout: default
+title: "README"
+author_profile: true
+layout: single
 ---
 
 # kb

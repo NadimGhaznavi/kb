@@ -1,5 +1,7 @@
 ---
 title: "Building XMRig from Source"
+author_profile: true
+layout: single
 ---
 
 # Introduction

@@ -1,6 +1,7 @@
 ---
-title: Model-Based Reinforcement Learning Library
-layout: default
+title: "Model-Based Reinforcement Learning Library"
+author_profile: true
+layout: single
 ---
 
 ![MBRL - Agent Class](/img/mbrl-agent.png)

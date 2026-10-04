@@ -1,6 +1,7 @@
 ---
-title: Simplistic Factory Pattern in Python
-layout: default
+title: "Simplistic Factory Pattern in Python"
+author_profile: true
+layout: single
 ---
 
 In this snippet, ModelFactory is our factory class that creates different machine-learning models based on the input model_type. This way, the code calling the factory doesn’t need to know about the specific model classes, making it more readable and extendable.

@@ -1,6 +1,7 @@
 ---
-title: P2Pool
-layout: default
+title: "P2Pool"
+author_profile: true
+layout: single
 ---
 
 # Table of Contents

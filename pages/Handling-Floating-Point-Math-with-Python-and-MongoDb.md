@@ -1,6 +1,7 @@
 ---
-title: Handling Floating Point Math with Python and MongoDb
-layout: default
+title: "Handling Floating Point Math with Python and MongoDb"
+author_profile: true
+layout: single
 ---
 
 ### Introduction and Scope 

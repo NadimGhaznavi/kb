@@ -1,7 +1,8 @@
 ---
-title: Textual
+title: "Textual"
+author_profile: true
+layout: single
 description: Rapid Application Development Framework
-layout: default
 ---
 
 # Using the Console

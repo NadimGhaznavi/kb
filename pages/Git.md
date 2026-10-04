@@ -1,6 +1,7 @@
 ---
-title: Git
-layout: default
+title: "Git"
+author_profile: true
+layout: single
 ---
 
 # List of Repository Changes

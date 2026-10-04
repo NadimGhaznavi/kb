@@ -1,7 +1,8 @@
 ---
-title: Sound
+title: "Sound"
+author_profile: true
+layout: single
 description: Linux Sound Settings
-layout: default
 ---
 
 # Overclocking your Volume

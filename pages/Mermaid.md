@@ -1,6 +1,7 @@
 ---
-title: Mermaid
-layout: default
+title: "Mermaid"
+author_profile: true
+layout: single
 ---
 
 # Introduction and Scope 

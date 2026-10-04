@@ -1,6 +1,7 @@
 ---
-title: XMRig
-layout: default
+title: "XMRig"
+author_profile: true
+layout: single
 ---
 
 # Dependencies

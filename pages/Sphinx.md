@@ -1,7 +1,8 @@
 ---
-title: Sphinx
+title: "Sphinx"
+author_profile: true
+layout: single
 description: Documentation Generator
-layout: default
 ---
 
 # Pulling Docstrings from Code

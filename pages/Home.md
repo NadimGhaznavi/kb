@@ -1,6 +1,7 @@
 ---
-title: Home
-layout: default
+title: "Home"
+author_profile: true
+layout: single
 ---
 
 ### Misc. Software Systems

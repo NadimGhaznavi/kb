@@ -1,6 +1,7 @@
 ---
-title: Banana Chocolate Muffins
-layout: default
+title: "Banana Chocolate Muffins"
+author_profile: true
+layout: single
 ---
 
 ![Banana Chocolate Muffins](/img/banana-choc-muffins-01.jpg)

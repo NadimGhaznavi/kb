@@ -1,6 +1,7 @@
 ---
-title: GitHub Flavored Markdown
-layout: default
+title: "GitHub Flavored Markdown"
+author_profile: true
+layout: single
 ---
 
 # Introduction and Scope

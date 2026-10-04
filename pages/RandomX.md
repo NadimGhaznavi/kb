@@ -1,6 +1,7 @@
 ---
-title: RandomX
-layout: default
+title: "RandomX"
+author_profile: true
+layout: single
 ---
 
 # Introduction and Scope

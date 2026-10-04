@@ -1,6 +1,7 @@
 ---
-title: Howto Enable And Disable The OS GUI
-layout: default
+title: "Howto Enable And Disable The OS GUI"
+author_profile: true
+layout: single
 ---
 
 # Runlevels

@@ -1,6 +1,7 @@
 ---
-title: Docker
-layout: default
+title: "Docker"
+author_profile: true
+layout: single
 ---
 
 # Installing Docker

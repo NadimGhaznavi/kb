@@ -1,6 +1,7 @@
 ---
-title: Simplistic Decorator Pattern in Python
-layout: default
+title: "Simplistic Decorator Pattern in Python"
+author_profile: true
+layout: single
 ---
 
 Consider a data engineering project scenario with a basic data pipeline responsible for extracting, transforming, and loading (ETL) operations. Over time, the need arises to add logging, error handling, and data validation steps without disrupting the existing pipeline structure.

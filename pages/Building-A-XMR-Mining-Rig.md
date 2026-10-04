@@ -1,6 +1,7 @@
 ---
-title: Building A XMR Mining Rig
-layout: default
+title: "Building A XMR Mining Rig"
+author_profile: true
+layout: single
 ---
 
 # Hardware Specs

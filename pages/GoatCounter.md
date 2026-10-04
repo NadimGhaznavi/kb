@@ -1,6 +1,7 @@
 ---
-title: Goat Counter
-layout: default
+title: "Goat Counter"
+author_profile: true
+layout: single
 ---
 
 # Introduction and Scope

@@ -1,6 +1,7 @@
 ---
-title: Rasa
-layout: default
+title: "Rasa"
+author_profile: true
+layout: single
 ---
 
 # Installing Rasa's Open Source Edition

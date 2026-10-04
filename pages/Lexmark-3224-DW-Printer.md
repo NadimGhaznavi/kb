@@ -1,6 +1,7 @@
 ---
-title: Lexmark 3224 DW Printer
-layout: default
+title: "Lexmark 3224 DW Printer"
+author_profile: true
+layout: single
 ---
 
 # Introduction and Scope

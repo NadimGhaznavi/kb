@@ -1,6 +1,7 @@
 ---
-title: ceph
-layout: default
+title: "ceph"
+author_profile: true
+layout: single
 ---
 
 # Table of Contents

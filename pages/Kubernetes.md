@@ -1,6 +1,7 @@
 ---
-title: Kubernetes
-layout: default
+title: "Kubernetes"
+author_profile: true
+layout: single
 ---
 
 # Table of Contents

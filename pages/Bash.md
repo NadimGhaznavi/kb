@@ -1,6 +1,7 @@
 ---
-title: Bash 
-layout: default
+title: "Bash"
+author_profile: true
+layout: single
 ---
 
 # Introduction and Scope

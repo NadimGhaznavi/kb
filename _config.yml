@@ -33,7 +33,7 @@ name: "Knowledge Base"
 description: "A Personal KB."
 url: "https://kb.osoyalce.com" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl: "" # the subpath of your site, e.g. "/blog"
-repository: NadimGhaznavi/kb # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository: "NadimGhaznavi/kb" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser: # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo: "/img/kb.png"
 masthead_title: # overrides the website title displayed in the masthead, use " " for no title

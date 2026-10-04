@@ -1,6 +1,7 @@
 ---
-title: Jenkins
-layout: default
+title: "Jenkins"
+author_profile: true
+layout: single
 ---
 
 ### Introduction and Scope

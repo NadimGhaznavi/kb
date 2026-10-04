@@ -1,6 +1,7 @@
 ---
-title: Enabling Huge Page Support in Grub
-layout: default
+title: "Enabling Huge Page Support in Grub"
+author_profile: true
+layout: single
 ---
 
 Edit the */etc/default/grub* configuration file and add the *transparent_hugepage=always* to the *GRUB_CMDLINE_LINUX_DEFAULT* line:

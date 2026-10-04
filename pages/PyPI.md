@@ -1,7 +1,8 @@
 ---
-title: PyPI
+title: "PyPI"
+author_profile: true
+layout: single
 description: The Python Package Index
-layout: default
 ---
 
 # Introduction

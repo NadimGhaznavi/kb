@@ -1,6 +1,7 @@
 ---
-title: GoDaddy CLI Tool
-layout: default
+title: "GoDaddy CLI Tool"
+author_profile: true
+layout: single
 ---
 
 ## Download and Install GoDaddy CLI Tool

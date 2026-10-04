@@ -1,6 +1,7 @@
 ---
-title: VTune
-layout: default
+title: "VTune"
+author_profile: true
+layout: single
 ---
 
 # Starting VTune

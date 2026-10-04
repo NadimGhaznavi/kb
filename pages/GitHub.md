@@ -1,6 +1,7 @@
 ---
-title: GitHub
-layout: default
+title: "GitHub"
+author_profile: true
+layout: single
 ---
 
 # Introduction and Scope

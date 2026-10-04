@@ -1,6 +1,7 @@
 ---
-title: Model View Controller Pattern in Python
-layout: default
+title: "Model View Controller Pattern in Python"
+author_profile: true
+layout: single
 ---
 
 # Introduction and Scope

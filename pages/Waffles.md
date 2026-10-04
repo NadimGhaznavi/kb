@@ -1,6 +1,7 @@
 ---
-title: Waffles
-layout: default
+title: "Waffles"
+author_profile: true
+layout: single
 ---
 
 ![Waffles](/img/waffles.png)

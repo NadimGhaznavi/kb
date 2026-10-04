@@ -1,6 +1,7 @@
 ---
-title: NadimGhaznavi
-layout: default
+title: "NadimGhaznavi"
+author_profile: true
+layout: single
 ---
 
 The following command can be used to list all installed files for a specific package on a Debian-based system:

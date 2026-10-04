@@ -1,6 +1,7 @@
 ---
-title: General TekSavvy Information
-layout: default
+title: "General TekSavvy Information"
+author_profile: true
+layout: single
 ---
 
 ### DNS Servers

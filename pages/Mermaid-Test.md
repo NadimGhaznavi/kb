@@ -1,6 +1,7 @@
 ---
-title: Mermaid Test
-layout: default
+title: "Mermaid Test"
+author_profile: true
+layout: single
 ---
 
 <pre class="mermaid">

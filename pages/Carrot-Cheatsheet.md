@@ -1,6 +1,7 @@
 ---
-title: Carrot Cheatsheet
-layout: default
+title: "Carrot Cheatsheet"
+author_profile: true
+layout: single
 ---
 
 # Table of Contents

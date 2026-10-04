@@ -1,6 +1,7 @@
 ---
-title: ZeroMQ
-layout: default
+title: "ZeroMQ"
+author_profile: true
+layout: single
 ---
 
 # Socket Types

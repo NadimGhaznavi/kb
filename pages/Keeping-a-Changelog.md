@@ -1,6 +1,7 @@
 ---
-layout: default
-title: Keep a Changelog
+title: "Keep a Changelog"
+author_profile: true
+layout: single
 date: 2024-07-06
 ---
 

@@ -1,6 +1,7 @@
 ---
-title: Python sqlite3
-layout: default
+title: "Python sqlite3"
+author_profile: true
+layout: single
 ---
 
 # Introduction and Scope

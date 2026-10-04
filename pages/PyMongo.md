@@ -1,6 +1,7 @@
 ---
-title: PyMongo
-layout: default
+title: "PyMongo"
+author_profile: true
+layout: single
 ---
 
 # Table of Contents

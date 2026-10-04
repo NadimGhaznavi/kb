@@ -1,7 +1,8 @@
 ---
-title: Architecture Review Skill
+title: "Architecture Review Skill"
+author_profile: true
+layout: single
 description: Where the Architecture Review skill is installed and how to use it in ChatGPT and Codex.
-layout: default
 ---
 
 # Architecture Review Skill

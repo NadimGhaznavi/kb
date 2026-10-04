@@ -1,6 +1,7 @@
 ---
-title: Howto Create a Persistent Linux Swap File
-layout: default
+title: "Howto Create a Persistent Linux Swap File"
+author_profile: true
+layout: single
 ---
 
 Check your current swap configuration:

@@ -1,6 +1,7 @@
 ---
-title: Chocolate Chocolate Cookies
-layout: default
+title: "Chocolate Chocolate Cookies"
+author_profile: true
+layout: single
 ---
 
 

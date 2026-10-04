@@ -1,6 +1,7 @@
 ---
-title: Tilix
-layout: default
+title: "Tilix"
+author_profile: true
+layout: single
 ---
 
 # Keyboard Shortcuts

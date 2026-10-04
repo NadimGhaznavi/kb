@@ -1,6 +1,7 @@
 ---
-title: Python BTrees
-layout: default
+title: "Python BTrees"
+author_profile: true
+layout: single
 ---
 
 # Introduction and Scope

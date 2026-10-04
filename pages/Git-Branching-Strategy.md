@@ -1,6 +1,7 @@
 ---
-title: Git Branching Strategy
-layout: default
+title: "Git Branching Strategy"
+author_profile: true
+layout: single
 ---
 
 # Diagram

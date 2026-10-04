@@ -1,6 +1,7 @@
 ---
-title: Unit Testing With Python
-layout: default
+title: "Unit Testing With Python"
+author_profile: true
+layout: single
 ---
 
 ## Introduction and Scope

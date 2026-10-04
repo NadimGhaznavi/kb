@@ -1,6 +1,7 @@
 ---
-title: Building P2Pool in a Docker Container
-layout: default
+title: "Building P2Pool in a Docker Container"
+author_profile: true
+layout: single
 ---
 
 # Introduction and Scope

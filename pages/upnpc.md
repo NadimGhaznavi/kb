@@ -1,6 +1,7 @@
 ---
-title: upnpc
-layout: default
+title: "upnpc"
+author_profile: true
+layout: single
 ---
 
 # Installing the upnpc Utility

@@ -1,6 +1,7 @@
 ---
-title: Aquaponics
-layout: default
+title: "Aquaponics"
+author_profile: true
+layout: single
 ---
 
 # Mini Cleanup Crews

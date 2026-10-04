@@ -1,6 +1,7 @@
 ---
-title: Haveno
-layout: default
+title: "Haveno"
+author_profile: true
+layout: single
 ---
 
 ![Haveno Logo](/NadimGhaznavi/kb/blob/main/img/haveno_logo_landscape.svg)

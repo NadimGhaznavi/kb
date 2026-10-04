@@ -1,6 +1,7 @@
 ---
-title: Howto Disable Suspend and Hibernate
-layout: default
+title: "Howto Disable Suspend and Hibernate"
+author_profile: true
+layout: single
 ---
 
 Edit the `/etc/systemnd/sleep.conf` file as shown below:

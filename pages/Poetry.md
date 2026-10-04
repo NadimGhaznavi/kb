@@ -1,5 +1,7 @@
 ---
-title: Poety
+title: "Poety"
+author_profile: true
+layout: single
 description: Python Packaging and Dependency Management
 ---
 

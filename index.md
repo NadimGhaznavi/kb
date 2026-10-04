@@ -1,7 +1,7 @@
 ---
 title: Knowledge Base
-description: The Bear and Moose Knowledge Base
-layout: default
+author_profile: true
+layout: single
 ---
 
 ![Bear and Moose](/img/kb.img)

@@ -1,6 +1,7 @@
 ---
-title: Pygame
-layout: default
+title: "Pygame"
+author_profile: true
+layout: single
 ---
 
 # Introduction

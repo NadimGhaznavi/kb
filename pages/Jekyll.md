@@ -1,6 +1,7 @@
 ---
-title: Jekyll
-layout: default
+title: "Jekyll"
+author_profile: true
+layout: single
 ---
 
 

@@ -1,6 +1,7 @@
 ---
-title: Python Generator Functions
-layout: default
+title: "Python Generator Functions"
+author_profile: true
+layout: single
 ---
 
 # Introduction and Scope

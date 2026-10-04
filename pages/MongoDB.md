@@ -1,6 +1,7 @@
 ---
-title: MongoDB
-layout: default
+title: "MongoDB"
+author_profile: true
+layout: single
 ---
 
 # Table of Contents

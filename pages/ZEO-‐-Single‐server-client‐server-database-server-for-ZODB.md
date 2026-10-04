@@ -1,6 +1,7 @@
 ---
-title: ZEO ‐ Single‐server client‐server database server for ZODB
-layout: default
+title: "ZEO ‐ Single‐server client‐server database server for ZODB"
+author_profile: true
+layout: single
 ---
 
 # Client test

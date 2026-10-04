@@ -1,6 +1,7 @@
 ---
-title: Apex Charts
-layout: default
+title: "Apex Charts"
+author_profile: true
+layout: single
 ---
 
 # Introduction and Scope

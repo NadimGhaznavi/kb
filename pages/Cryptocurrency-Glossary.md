@@ -1,6 +1,7 @@
 ---
-title: Cryptocurrency Glossary
-layout: default
+title: "Cryptocurrency Glossary"
+author_profile: true
+layout: single
 ---
 
 # Acronyms and Cryptocurrency Terms

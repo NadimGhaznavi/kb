@@ -1,6 +1,7 @@
 ---
-title: HP z440 Workstation
-layout: default
+title: "HP z440 Workstation"
+author_profile: true
+layout: single
 ---
 
 # Example boot strategy

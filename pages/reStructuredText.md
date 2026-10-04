@@ -1,7 +1,8 @@
 ---
-title: reStructuredText (RST)
+title: "reStructuredText (RST)"
+author_profile: true
+layout: single
 description: Sphinx Markup Language
-layout: default
 ---
 
 # Links

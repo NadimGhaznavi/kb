@@ -1,5 +1,7 @@
 ---
-title: PIP
+title: "PIP"
+author_profile: true
+layout: single
 description: PIP installs Packages
 ---
 

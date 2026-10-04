@@ -1,5 +1,7 @@
 ---
 title: "Building P2Pool from Source"
+author_profile: true
+layout: single
 ---
 
 # Introduction
