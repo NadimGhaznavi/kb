@@ -88,6 +88,7 @@ This site is a personal knowledge base. It contains basic reference material tha
 * [Lexmark Printer Configuration]({% link pages/Lexmark-3224-DW-Printer.md %})
 * [General TekSavvy Information]({% link pages/General-TekSavvy-Information.md %})
 * [HP z440 Workstation]({% link pages/HP-z440-Workstation.md %})
+* [Nvidia Quadro M4000 GPU]({% link pages/Nvidia-Quadro-M4000-GPU.md %})
 
 ---
 
