@@ -122,6 +122,8 @@ This site is a personal knowledge base. It contains basic reference material tha
 * [HOWTO Enable and Disable the OS GUI]({% link pages/Howto-Enable-And-Disable-The-OS-GUI.md %})
 * [HOWTO Disable Suspend and Hibernate]({% link pages/Howto-Disable-Suspend-and-Hibernate.md %})
 * [HOWTO Create a Persistent Linux Swap File]({% link pages/Howto-Create-a-Persistent-Linux-Swap-File.md %})
+* [Fedora Server](https://fedoraproject.org/server/download/)
+* [FreeIPA]({% link pages/FreeIPA.md %})
 
 ---
 
