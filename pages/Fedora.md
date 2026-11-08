@@ -22,6 +22,16 @@ layout: single
 6. Under **Root Account**, enable root and set its password. For this lab build, select **Allow root SSH login with password**.
 7. Click **Begin Installation**. When it finishes, click **Reboot System**.
 
+---
+
+## Post Install Steps
+
+### Install Additional Software
+
+```
+# dnf install vim htop
+```
+
 ## Mapping apt to dnf
 
 Debian (apt) | Fedora (dnf)
