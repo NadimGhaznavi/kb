@@ -10,6 +10,13 @@ This site is a personal knowledge base. It contains basic reference material tha
 
 ---
 
+## Table of Contents
+{:no_toc}
+
+{:toc}
+
+---
+
 # Misc. Software
 
 * [Architecture Review Skill]({% link pages/Architecture-Review-Skill.md %}) - Installation and use in ChatGPT and Codex
@@ -113,17 +120,21 @@ This site is a personal knowledge base. It contains basic reference material tha
 # Linux
 
 * [Bash snippets]({% link pages/Bash.md %})
-* [Enabling Huge Page Support in Grub]({% link pages/Enabling-Huge-Page-Support-in-Grub.md %})
-* [Configuring a Persistent WiFi Connection using WPA Supplicant]({% link pages/Configuring-a-Persistent-WiFi-Connection-using-WPA-Supplicant.md %})
-* [Create-A-Container-Running-XMRig]({% link pages/Deploy-xmrig-on-a-container.md %})
-* [GoDaddy CLI Tool]({% link pages/godaddy-cli.md %})
-* [upnpc]({% link pages/upnpc.md %}) - Configuring Port Forwarding on your Router
-* [List Files Installed Files for a Debian Package]({% link pages/NadimGhaznavi.md %})
+* [gddy - GoDaddy CLI Tool]({% link pages/godaddy-cli.md %})
+* [Fedora Linux Distribution]({% link pages/Fedora.md %})
+* [FreeIPA Software]({% link pages/FreeIPA.md %})
+  * [Kerberos]({% link pages/Kerberos.md %})
+
+## HOWTO
+
+* [HOWTO Create a Container Running XMRig]({% link pages/Deploy-xmrig-on-a-container.md %})
 * [HOWTO Enable and Disable the OS GUI]({% link pages/Howto-Enable-And-Disable-The-OS-GUI.md %})
+* [HOWTO List Files Installed Files for a Debian Package]({% link pages/NadimGhaznavi.md %})
 * [HOWTO Disable Suspend and Hibernate]({% link pages/Howto-Disable-Suspend-and-Hibernate.md %})
 * [HOWTO Create a Persistent Linux Swap File]({% link pages/Howto-Create-a-Persistent-Linux-Swap-File.md %})
-* [Fedora Server](https://fedoraproject.org/server/download/)
-* [FreeIPA]({% link pages/FreeIPA.md %})
+* [HOWTO Configure a Persistent WiFi Connection using WPA Supplicant]({% link pages/Configuring-a-Persistent-WiFi-Connection-using-WPA-Supplicant.md %})
+* [HOWTO Enable Huge Page Support in Grub]({% link pages/Enabling-Huge-Page-Support-in-Grub.md %})
+* [HOWTO Configure Port Forwarding on your Router (upnpc)]({% link pages/upnpc.md %})
 
 ---
 
