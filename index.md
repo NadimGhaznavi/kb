@@ -11,8 +11,9 @@ This site is a personal knowledge base. It contains basic reference material tha
 ---
 
 ## Table of Contents
-{:no_toc}
+{: .no_toc}
 
+* TOC
 {:toc}
 
 ---

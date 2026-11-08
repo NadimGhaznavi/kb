@@ -300,6 +300,12 @@ compress_html:
 
 # Defaults
 defaults:
+  # Use the theme's wide layout for all pages and posts.
+  - scope:
+      path: ""
+    values:
+      classes: wide
+
   # _posts
   - scope:
       path: ""
