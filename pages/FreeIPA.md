@@ -12,6 +12,14 @@ If you do get stuck, reach out and ask for help! :)
 
 ---
 
+# Table of Contents
+{:.no_toc}
+
+* TOC
+{:toc}
+
+---
+
 # Deploy FreeIPA Server
 
 This assumes you have your Linux OS up and running. I used Fedora Server 45.
