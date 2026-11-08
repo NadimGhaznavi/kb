@@ -4,99 +4,17 @@ author_profile: true
 layout: single
 ---
 
-FreeIPA runs on Fedora as an installed component. Save yourself some grief and run Fedora if you're going to run FreeIPA.
+FreeIPA runs on Fedora as an installed component. Save yourself some grief and run Fedora if you're going to run FreeIPA. Setting up FreeIPA is a bit complicated. I found an excellent [YouTube tutorial](https://www.youtube.com/watch?v=8ywLsrBwqxA&t=1s) by Dave from [Browse Tech](https://www.youtube.com/@prowsetech) and based most of this documentation on the video.
+
+Dave deploys FreeIPA on CentOS, I'm deploying it on Fedora Server. I'm pretty sure you can adapt this procedure to any Linux distribution that includes FreeIPA.
+
+If you do get stuck, reach out and ask for help! :)
 
 ---
 
-## Installation
+# Deploy FreeIPA Server
 
-FreeIPA is a default component when you install Fedora Server 45. You select it when you install the OS. It's a checkbox. You can do this! :)
-
----
-
-## Initial Configuration
-
-
-### Firewall Configuration
-
-As root:
-
-```sh
-root@kermit:~# firewall-cmd --add-service=freeipa-ldap --add-service=freeipa-ldaps --permanent
-success
-```
-
-### Install FreeIPA
-
-If you haven't already, you'll need to install FreeIPA:
-
-```sh
-root@kermit:~# dnf install freeipa-server
-Updating and loading repositories:
-Repositories loaded.
-Package "freeipa-server-4.13.4-3.2.fc45.x86_64" is already installed.
-
-Nothing to do.
-root@kermit:~# 
-```
-
-### Configure FreeIPA
-
-```sh
-ipa-server-install
-```
-
-Follow the instructions.
-
----
-
-## Additional Documentation
-
-```sh
-$ man ipa
-$ ipa help topics
-$ ipa help user
-```
-
----
-
-## Adding the First User
-
-```sh
-$ ipa user-add --first=Nadim --last=Ghaznavi --password nadim
-```
----
-
-## Add a New FreeIPA Client Machine
-
-TODO: You need to have the software installed.
-
-```
-root@paris:~# nmcli con show --active
-NAME              UUID                                  TYPE      DEVICE 
-wired connection  e0218fe7-102a-38ef-b859-b9a97e87d434  ethernet  enp3s0 
-lo                71755df6-783b-4b7d-a2e9-6f831e89a259  loopback  lo     
-root@paris:~# 
-```
-
-```
-root@paris:~# nmcli con mod "wired connection" ipv4.dns 192.168.0.176
-root@paris:~# nmcli con mod "wired connection" ipv4.ignore-auto-dns yes
-root@paris:~# nmcli con up "wired connection"
-Connection successfully activated (D-Bus active path: /org/freedesktop/NetworkManager/ActiveConnection/3)
-root@paris:~# 
-```
-
-## Links
-
-* [FreeIPA Homepage](https://www.freeipa.org/)
-* [Fedora Server Download](https://fedoraproject.org/server/download/)
-
-
----
-
----
-
+This assumes you have your Linux OS up and running. I used Fedora Server 45.
 
 ## Get IP and DNS Information
 
@@ -135,7 +53,7 @@ Note the IP (`192.168.0.176`) and the upstream DNS servers (`206.248.154.22 206.
 
 ---
 
-## Fully Qualified Hostname
+## Check for Fully Qualified Hostname
 
 FreeIPA requires that your hostname be fully qualified (`kermit.lab.osoyalce.com` in the example below).
 
@@ -179,7 +97,9 @@ For example:
 
 ---
 
-## Install FreeIPA
+## Install FreeIPA Server
+
+I am using the built in DNS server. 
 
 ```
 # dnf install freeipa-server-dns
@@ -352,9 +272,9 @@ root@kermit:~ #
 
 ---
 
-## Add a Fedora Machine to the FreeIPA Domain
+# Add a Fedora Machine to the FreeIPA Domain
 
-### Get the IP Address
+## Get the IP Address
 
 We need the IP address (`192.168.0.27`).
 
@@ -386,7 +306,7 @@ Use "nmcli device show" to get complete information about known devices and
 Consult nmcli(1) and nmcli-examples(7) manual pages for complete usage details.
 ```
 
-### Confirm a Fully Qualified Hostname
+## Confirm a Fully Qualified Hostname
 
 Confirm that the hostname is fully qualified (i.e. `paris.lab.osoyalce.com`, not `paris`).
 
@@ -416,7 +336,7 @@ OS Support Remaining: 1y 4w
 root@paris:~ # 
 ```
 
-### Install the FreeIPA Client
+## Install the FreeIPA Client
 
 It's already installed here.
 
@@ -431,7 +351,7 @@ Nothing to do.
 root@paris:~ # 
 ```
 
-### Configure DNS to use your IPA Server
+## Configure DNS to use your IPA Server
 
 I have FreeIPA deployed on `kermit.lab.osoyalce.com` which has an IP of `192.168.0.176`:
 
@@ -456,7 +376,7 @@ This confirms that:
   - Including reverse mappings
 - Kermit is resolving Internet DNS queries (using a forwarders configuration)
 
-### Configure the FreeIPA Client
+## Configure the FreeIPA Client
 
 ```
 root@paris:~ # ipa-client-install --enable-dns-updates --mkhomedir --ntp-pool=ca.pool.ntp.org
@@ -504,7 +424,7 @@ The ipa-client-install command was successful
 root@paris:~ # 
 ```
 
-### Test
+## Test
 
 See if you can now use a FreeIPA domain account  (e.g. `nadim`) on the newly added machine.
 
