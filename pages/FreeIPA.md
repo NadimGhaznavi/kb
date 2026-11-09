@@ -459,3 +459,112 @@ nadim@paris:~$
 ```
 
 BINGO! 🐧
+
+---
+
+# Setting Up Automounter Maps
+
+## Create a Location
+
+```
+ipa automountlocation-add delta
+```
+
+## Create a Map
+
+Maps are created in locations (e.g. in the new *delta* location).
+
+```
+ipa automountmap-add delta auto.imports
+```
+
+-and verify:
+
+```
+root@phoebe:/etc/pam.d # ipa automountmap-find delta
+------------------------
+4 automount maps matched
+------------------------
+  Map: auto.direct
+
+  Map: auto.home
+
+  Map: auto.imports
+
+  Map: auto.master
+----------------------------
+Number of entries returned 4
+----------------------------
+root@phoebe:/etc/pam.d # 
+```
+
+## Tie the Map to the Location
+
+Create a new key for the auto.imports map in location *delta*. This ties
+the map we previously created to auto.master:
+
+```
+ipa automountkey-add delta auto.master --key=/imports --info=auto.imports
+```
+
+## Define an NFS Share
+
+Now we tie it all together:
+
+```
+ipa automountkey-add \
+  delta \
+  auto.imports \
+  --key=disk1 \
+  --info="-rw,soft,rsize=8192,wsize=8192 wintermute.lab.osoyalce.com:/exports/disk1"
+```
+
+and verify:
+
+```
+root@phoebe:/etc/pam.d # ipa automountkey-find delta auto.imports
+-----------------------
+1 automount key matched
+-----------------------
+  Key: disk1
+  Mount information: -rw,soft,rsize=8192,wsize=8192
+                     wintermute.lab.osoyalce.com:/exports/disk1
+----------------------------
+Number of entries returned 1
+----------------------------
+root@phoebe:/etc/pam.d # 
+```
+
+# Setting up Automounted Home Directories
+
+## Create the auto.home Map
+
+```
+root@kermit:~ # ipa automountmap-add delta auto.home
+-------------------------------
+Added automount map "auto.home"
+-------------------------------
+  Map: auto.home
+root@kermit:~ #
+```
+
+## Link Map to auto.master
+
+```
+root@kermit:~ # ipa automountkey-add delta auto.master --key=/homeipa --info=auto.home
+---------------------------
+Added automount key "/homeipa"
+---------------------------
+  Key: /home
+  Mount information: auto.home
+root@kermit:~ # 
+```
+
+## Create the Mount Entry
+
+```
+root@kermit:~ # ipa automountkey-add delta auto.home \
+    --key='*' \
+    --info='-fstype=nfs4,rw,hard wintermute.lab.osoyalce.com:/exports/disk1/home/&'
+root@kermit:~ #
+```
