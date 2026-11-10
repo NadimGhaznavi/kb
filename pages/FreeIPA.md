@@ -247,7 +247,13 @@ root@kermit:~ #
 Example command:
 
 ```
-ipa user-add nadim --password --homedir=/ipahome/nadim --first="Nadim-Daniel" --last="Ghaznavi" --initials=NDG --email="nghaznavi@gmail.com" --shell /bin/bash
+ipa user-add nadim --password \
+  --homedir=/ipahome/nadim \
+  --first="Nadim-Daniel" \
+  --last="Ghaznavi" \
+  --initials="NDG" \
+  --email="nghaznavi@gmail.com" \
+  --shell /bin/bash
 ```
 
 Expected output:
