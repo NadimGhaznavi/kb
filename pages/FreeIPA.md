@@ -244,8 +244,15 @@ root@kermit:~ #
 
 ## Add A User
 
+Example command:
+
 ```
-root@kermit:~ # root@kermit:~ # ipa user-add nadim --password --homedir=/home/nadim --first="Nadim-Daniel" --last="Ghaznavi" --initials=NDG --email="nghaznavi@gmail.com" --shell /bin/bash
+ipa user-add nadim --password --homedir=/ipahome/nadim --first="Nadim-Daniel" --last="Ghaznavi" --initials=NDG --email="nghaznavi@gmail.com" --shell /bin/bash
+```
+
+Expected output:
+
+```
 Password: 
 Enter Password again to verify: 
 ------------------
@@ -269,13 +276,6 @@ Added user "nadim"
   Password: True
   Member of groups: ipausers
   Kerberos keys available: True
-root@kermit:~ # su - nadim
-Last login: Sun Nov  8 13:09:53 EST 2026 on pts/3
-nadim@kermit:~$ pwd
-/home/nadim
-nadim@kermit:~$ 
-logout
-root@kermit:~ #
 ```
 
 ---
@@ -387,7 +387,7 @@ This confirms that:
 ## Configure the FreeIPA Client
 
 ```
-root@paris:~ # ipa-client-install --enable-dns-updates --mkhomedir --ntp-pool=ca.pool.ntp.org
+root@paris:~ # ipa-client-install --enable-dns-updates --ntp-pool=ca.pool.ntp.org
 This program will set up IPA client.
 Version 4.13.4
 
@@ -537,34 +537,35 @@ root@phoebe:/etc/pam.d #
 
 # Setting up Automounted Home Directories
 
-## Create the auto.home Map
+## Create the auto.ipahome Map
 
 ```
-root@kermit:~ # ipa automountmap-add delta auto.home
+root@kermit:~ # ipa automountmap-add delta auto.ipahome
 -------------------------------
-Added automount map "auto.home"
+Added automount map "auto.ipahome"
 -------------------------------
-  Map: auto.home
+  Map: auto.ipahome
 root@kermit:~ #
 ```
 
 ## Link Map to auto.master
 
 ```
-root@kermit:~ # ipa automountkey-add delta auto.master --key=/homeipa --info=auto.home
+root@kermit:~ # ipa automountkey-add delta auto.master --key=/homeipa --info=auto.ipahome
 ---------------------------
 Added automount key "/homeipa"
 ---------------------------
-  Key: /home
-  Mount information: auto.home
+  Key: /ipahome
+  Mount information: auto.ipahome
 root@kermit:~ # 
 ```
 
 ## Create the Mount Entry
 
 ```
-root@kermit:~ # ipa automountkey-add delta auto.home \
+root@kermit:~ # ipa automountkey-add delta auto.ipahome \
     --key='*' \
-    --info='-fstype=nfs4,rw,hard wintermute.lab.osoyalce.com:/exports/disk1/home/&'
+    --info='-fstype=nfs4,rw,hard wintermute.lab.osoyalce.com:/exports/disk1/ipahome/&'
 root@kermit:~ #
 ```
+
