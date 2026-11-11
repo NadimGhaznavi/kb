@@ -470,108 +470,353 @@ BINGO! 🐧
 
 # Setting Up Automounter Maps
 
-## Create a Location
+This procedure was verified on Sally, an enrolled Debian client. It mounts
+`wintermute.lab.osoyalce.com:/exports/disk1` at `/imports/disk1`, with the
+mount definitions stored in FreeIPA and retrieved through SSSD.
 
-```
-ipa automountlocation-add delta
-```
+This is an **indirect map**: `/imports` is the parent mount point and `disk1`
+is a key beneath it. A direct map would use the full path `/imports/disk1`
+as its key in `auto.direct`.
 
-## Create a Map
+The NFS server already exports `/exports/disk1` to the lab network. We use
+ordinary NFS with `sec=sys`; Kerberos authentication to manage FreeIPA does
+not require Kerberized NFS.
 
-Maps are created in locations (e.g. in the new *delta* location).
+## Use the Default Location
 
-```
-ipa automountmap-add delta auto.imports
-```
+FreeIPA already provides a location named `default`. SSSD uses it when
+`ipa_automount_location` is unset in the client's domain configuration in
+`/etc/sssd/sssd.conf`. No additional location is needed for this setup.
 
--and verify:
+The client must select the location containing the maps. Our earlier maps
+were in `delta`, while Sally was reading `default`, so Sally could not see
+them.
 
-```
-root@phoebe:/etc/pam.d # ipa automountmap-find delta
-------------------------
-4 automount maps matched
-------------------------
-  Map: auto.direct
+## Create the Map and Mount Entry
 
-  Map: auto.home
+Run these commands with a Kerberos ticket for an IPA administrator or an
+account delegated the **Automount Administrators** privilege. Local root
+access alone does not grant permission to edit FreeIPA maps.
 
-  Map: auto.imports
+Create the map, add the share, and then link the map into `auto.master`:
 
-  Map: auto.master
-----------------------------
-Number of entries returned 4
-----------------------------
-root@phoebe:/etc/pam.d # 
-```
-
-## Tie the Map to the Location
-
-Create a new key for the auto.imports map in location *delta*. This ties
-the map we previously created to auto.master:
-
-```
-ipa automountkey-add delta auto.master --key=/imports --info=auto.imports
+```bash
+ipa automountmap-add default auto.imports
+ipa automountkey-add default auto.imports --key=disk1 --info='-fstype=nfs4,rw,hard,sec=sys wintermute.lab.osoyalce.com:/exports/disk1'
+ipa automountkey-add default auto.master --key=/imports --info=auto.imports
 ```
 
-## Define an NFS Share
+These are creation commands; run them once. To inspect the resulting entries:
 
-Now we tie it all together:
-
-```
-ipa automountkey-add \
-  delta \
-  auto.imports \
-  --key=disk1 \
-  --info="-rw,soft,rsize=8192,wsize=8192 wintermute.lab.osoyalce.com:/exports/disk1"
+```bash
+ipa automountkey-find default auto.imports
+ipa automountkey-find default auto.master
 ```
 
-and verify:
+The resulting mapping is:
 
+```text
+default
+  auto.master:  /imports -> auto.imports
+  auto.imports: disk1 -> wintermute.lab.osoyalce.com:/exports/disk1
 ```
-root@phoebe:/etc/pam.d # ipa automountkey-find delta auto.imports
------------------------
-1 automount key matched
------------------------
-  Key: disk1
-  Mount information: -rw,soft,rsize=8192,wsize=8192
-                     wintermute.lab.osoyalce.com:/exports/disk1
-----------------------------
-Number of entries returned 1
-----------------------------
-root@phoebe:/etc/pam.d # 
+
+## Check the Client's Map Source
+
+On Sally, `/etc/nsswitch.conf` already contains:
+
+```text
+automount: sss
 ```
+
+The local `/etc/auto.master` includes the central master map:
+
+```text
++auto.master
+```
+
+When migrating, remove the old `/imports /etc/auto.imports` entry and any
+other active local definitions for `/imports`. The share definition now
+lives in FreeIPA. Keep the client configuration that connects autofs to SSSD.
+
+Sally already had `autofs`, `sssd`, and `sssd-autofs.socket` active and enabled:
+
+```bash
+systemctl is-active autofs sssd sssd-autofs.socket
+systemctl is-enabled autofs sssd sssd-autofs.socket
+```
+
+This procedure assumes that client integration is already in place.
+
+## Refresh the Client's Map Cache
+
+On Sally, invalidate the cached automount maps and inspect what autofs reads:
+
+```bash
+sudo -n /usr/sbin/sss_cache -A -d lab.osoyalce.com
+sudo -n timeout 20 automount -m
+```
+
+The output should include this section. The `sss` source confirms that the
+map is being retrieved through SSSD:
+
+```text
+Mount point: /imports
+
+source(s):
+
+  instance type(s): sss
+  map: auto.imports
+
+  disk1 | -fstype=nfs4,rw,hard,sec=sys wintermute.lab.osoyalce.com:/exports/disk1
+```
+
+If only an empty `auto.direct` appears, check the selected IPA location and
+its `auto.master` entries before proceeding.
+
+## Replace the Old Local Mount
+
+Removing the local map definition does not necessarily remove its existing
+mount. On Sally, Nautilus and VLC held the old share open, leaving a stale
+`/imports` autofs mount after a service restart.
+
+Close applications using the share and check for remaining processes:
+
+```bash
+sudo -n fuser -vm /imports/disk1
+findmnt -rn -t nfs,nfs4,autofs -o TARGET,SOURCE,FSTYPE,OPTIONS
+```
+
+Once applications have released the share, stop autofs, unmount any remaining
+old mounts, and start autofs again. The following uses normal unmounts and
+restarts autofs on exit if a command fails. The subshell keeps the error
+handling local to this block:
+
+```bash
+(
+  set -e
+  sudo -n systemctl stop autofs
+  trap 'sudo -n systemctl start autofs' EXIT
+  if findmnt -rn -M /imports/disk1 >/dev/null; then
+    sudo -n umount /imports/disk1
+  fi
+  if findmnt -rn -M /imports >/dev/null; then
+    sudo -n umount /imports
+  fi
+  sudo -n systemctl start autofs
+  trap - EXIT
+)
+```
+
+## Verify the Automount
+
+Check the service and mount state before accessing the share:
+
+```bash
+systemctl is-active autofs
+findmnt -rn -t nfs,nfs4,autofs -o TARGET,SOURCE,FSTYPE,OPTIONS
+```
+
+At this point Sally showed `/imports` as an autofs mount sourced from
+`auto.imports`, with `/imports/disk1` not yet mounted. Access the path to
+trigger the NFS mount, then inspect it:
+
+```bash
+timeout 20 stat -c '%n mode=%a uid=%u gid=%g type=%F' /imports/disk1
+findmnt -rn -M /imports/disk1 -o TARGET,SOURCE,FSTYPE,OPTIONS
+sudo -n journalctl -u autofs --since '3 minutes ago' -n 50 --no-pager
+```
+
+On Sally, access succeeded and the new mount had:
+
+- Target: `/imports/disk1`
+- Source: `wintermute.lab.osoyalce.com:/exports/disk1`
+- Filesystem: `nfs4`, negotiated as NFSv4.2
+- Options including `rw`, `hard`, and `sec=sys`
+
+---
 
 # Setting up Automounted Home Directories
 
-## Create the auto.ipahome Map
+This setup was verified on Sally for both `nadim` and `codex`. It uses an
+indirect wildcard map in FreeIPA's `default` location, retrieved through
+SSSD, with ordinary NFS (`sec=sys`).
 
-```
-root@kermit:~ # ipa automountmap-add delta auto.ipahome
--------------------------------
-Added automount map "auto.ipahome"
--------------------------------
-  Map: auto.ipahome
-root@kermit:~ #
-```
+The client and server paths have different names:
 
-## Link Map to auto.master
+| Purpose | Path |
+| --- | --- |
+| User's home path in IPA and on clients | `/ipahome/<user>` |
+| Home directory stored on Wintermute | `/exports/disk1/homeipa/<user>` |
+| FreeIPA map | `default` / `auto.ipahome` |
 
-```
-root@kermit:~ # ipa automountkey-add delta auto.master --key=/homeipa --info=auto.ipahome
----------------------------
-Added automount key "/homeipa"
----------------------------
-  Key: /ipahome
-  Mount information: auto.ipahome
-root@kermit:~ # 
-```
+For example, `/ipahome/nadim` mounts
+`wintermute.lab.osoyalce.com:/exports/disk1/homeipa/nadim`.
 
-## Create the Mount Entry
+## Check the User's Home Path and Ownership
 
-```
-root@kermit:~ # ipa automountkey-add delta auto.ipahome \
-    --key='*' \
-    --info='-fstype=nfs4,rw,hard wintermute.lab.osoyalce.com:/exports/disk1/ipahome/&'
-root@kermit:~ #
+The client integration from the preceding section must already be working:
+SSSD selects `default`, `automount: sss` is configured, and autofs reads the
+central `auto.master` map. Check the account information on the client:
+
+```bash
+getent passwd nadim codex
 ```
 
+The verified account values were:
+
+| Account | UID | GID | Home directory |
+| --- | --- | --- | --- |
+| `nadim` | `1469600007` | `1469600007` | `/ipahome/nadim` |
+| `codex` | `1469600008` | `1469600008` | `/ipahome/codex` |
+
+Use the actual UID and GID for each account. With `sec=sys`, the ownership
+of the server-side directory must match the numeric IDs used by the client.
+The IPA home path must match the `/ipahome` mount point below.
+
+Before enabling the map, check for existing local homes beneath `/ipahome`;
+resolve any local data that would be hidden by the new automount.
+
+## Provision Home Directories on the NFS Server
+
+Wintermute already exports `/exports/disk1` to the lab network. The verified
+home mounts use subdirectories of that export; no additional export was
+needed for this setup.
+
+The wildcard map mounts existing directories. It does not create a home on
+the NFS server when a new IPA account is added.
+
+For a new `codex` home, the following commands can be run on **Wintermute**
+using the UID and GID checked above. Run the creation command only when that
+home does not already exist:
+
+```bash
+sudo install -d -m 0700 -o 1469600008 -g 1469600008 /exports/disk1/homeipa/codex
+sudo stat -c '%n mode=%a uid=%u gid=%g type=%F' /exports/disk1/homeipa/codex
+```
+
+During this rollout, the same directory was created through Sally's existing
+`/imports/disk1/homeipa/codex` NFS path. It has mode `0700` and ownership
+`1469600008:1469600008`. The existing `nadim` directory already had the
+correct ownership and was left unchanged.
+
+## Create the Wildcard Map in FreeIPA
+
+Run the IPA commands on an enrolled host with a Kerberos ticket for an IPA
+administrator or an account delegated the **Automount Administrators**
+privilege. For example, authenticate as the administrator with:
+
+```bash
+kinit admin
+```
+
+Create the map, add the wildcard entry, and link it into `auto.master`:
+
+```bash
+ipa automountmap-add default auto.ipahome
+ipa automountkey-add default auto.ipahome --key='*' --info='-fstype=nfs4,rw,hard,sec=sys wintermute.lab.osoyalce.com:/exports/disk1/homeipa/&'
+ipa automountkey-add default auto.master --key=/ipahome --info=auto.ipahome
+```
+
+Keep the quotes around `*` and the mount information. Autofs substitutes the
+requested key for `&`, so accessing `/ipahome/codex` selects the server's
+`homeipa/codex` directory. The shell must pass those characters literally.
+
+These creation commands are run once; they have already been applied in
+this lab. Inspect the entries with:
+
+```bash
+ipa automountkey-find default auto.ipahome
+ipa automountkey-find default auto.master
+```
+
+The master map should contain `/ipahome -> auto.ipahome`, and `auto.ipahome`
+should contain the `*` entry shown above.
+
+## Refresh and Reload the Client
+
+On Sally, invalidate the cached automount maps and inspect the map from SSSD:
+
+```bash
+sudo -n /usr/sbin/sss_cache -A -d lab.osoyalce.com
+sudo -n timeout 20 automount -m
+```
+
+The output should include:
+
+```text
+Mount point: /ipahome
+
+source(s):
+
+  instance type(s): sss
+  map: auto.ipahome
+
+  * | -fstype=nfs4,rw,hard,sec=sys wintermute.lab.osoyalce.com:/exports/disk1/homeipa/&
+```
+
+Reload autofs to add the new mount point. The reload signals the daemon and
+can return before `/ipahome` is ready, so wait for the autofs mount before
+accessing a user's home:
+
+```bash
+sudo -n systemctl reload autofs
+timeout 15 bash -c 'until findmnt -rn -M /ipahome -t autofs >/dev/null; do sleep 0.2; done'
+findmnt -rn -M /ipahome -o TARGET,SOURCE,FSTYPE
+```
+
+The last command should show `/ipahome`, `auto.ipahome`, and `autofs`.
+If the wait times out, inspect the service logs in the verification step
+before attempting a login. No local home-map definitions are required.
+
+## Verify Mounting and Home Directory Access
+
+On Sally, access the home paths and inspect their resulting mounts:
+
+```bash
+timeout 25 stat -c '%n mode=%a uid=%u gid=%g type=%F' /ipahome/nadim /ipahome/codex
+findmnt -rn -M /ipahome/nadim -o TARGET,SOURCE,FSTYPE,OPTIONS
+findmnt -rn -M /ipahome/codex -o TARGET,SOURCE,FSTYPE,OPTIONS
+```
+
+The sources should be Wintermute's `/exports/disk1/homeipa/nadim` and
+`/exports/disk1/homeipa/codex`. Both verified mounts negotiated NFSv4.2 with
+`rw`, `hard`, and `sec=sys`.
+
+Check that a login shell starts in the user's home and that the account can
+write, read back, and remove a temporary file there. This is the check used
+for `codex` on Sally:
+
+```bash
+sudo -n -i -u codex python3 - <<'PYTHON'
+import os
+import pwd
+import tempfile
+
+account = pwd.getpwuid(os.getuid())
+assert os.getcwd() == account.pw_dir, (os.getcwd(), account.pw_dir)
+assert os.environ['HOME'] == account.pw_dir
+print(f'Login home verified: user={account.pw_name} HOME={os.environ["HOME"]} cwd={os.getcwd()}')
+payload = 'automount home-directory read/write verification\n'
+with tempfile.NamedTemporaryFile(mode='w+', prefix='.automount-check-', dir='.') as check:
+    check.write(payload)
+    check.flush()
+    os.fsync(check.fileno())
+    check.seek(0)
+    assert check.read() == payload
+print('Read/write verification passed; temporary test file removed.')
+PYTHON
+```
+
+The test succeeded with `HOME` and the working directory both set to
+`/ipahome/codex`. A separate read/write test as `nadim` also succeeded.
+This verifies filesystem access as the account; it does not test SSH
+password authentication.
+
+For troubleshooting, check the services, the effective maps, and recent logs:
+
+```bash
+systemctl is-active autofs sssd sssd-autofs.socket
+sudo -n timeout 15 automount -m
+sudo -n journalctl -u autofs --since '5 minutes ago' -n 50 --no-pager
+```
