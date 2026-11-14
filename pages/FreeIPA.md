@@ -1357,3 +1357,9 @@ entry to expire; new sudo rules may require the provider's discovery refresh.
 These selectors are verified against Sally's installed `sss_cache --help`
 and `sss_cache(8)` manual. Use `/usr/sbin/sss_cache --help` on another host to
 check its supported options.
+
+--
+
+# Links
+
+- [Excellent CLI Reference](https://ipa.show/reference/)
