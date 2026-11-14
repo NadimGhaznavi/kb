@@ -477,45 +477,6 @@ explains the default requirement to change an administrator-set password.
 Run the installation commands in a root shell on Paris. The login test
 switches to the `nadim` account.
 
-## Get the IP Address
-
-We need the IP address (`192.168.0.27`).
-
-**Command:**
-
-```bash
-nmcli
-```
-
-**Example Output:**
-
-```text
-enp3s0: connected to wired connection
-        "Realtek RTL8111/8168/8211/8411"
-        ethernet (r8169), 30:85:A9:A9:48:5C, hw, mtu 1500
-        ip4 default
-        inet4 192.168.0.27/24
-        route4 192.168.0.0/24 metric 100
-        route4 default via 192.168.0.1 metric 100
-        inet6 fe80::789a:ab19:c2de:8a18/64
-        route6 fe80::/64 metric 1024
-
-lo: connected (externally) to lo
-        "lo"
-        loopback (unknown), 00:00:00:00:00:00, sw, mtu 65536
-        inet4 127.0.0.1/8
-        inet6 ::1/128
-
-DNS configuration:
-        servers: 192.168.0.176
-        interface: enp3s0
-
-Use "nmcli device show" to get complete information about known devices and
-"nmcli connection show" to get an overview on active connection profiles.
-
-Consult nmcli(1) and nmcli-examples(7) manual pages for complete usage details.
-```
-
 ## Confirm a Fully Qualified Hostname
 
 Confirm that the hostname is fully qualified (i.e. `paris.lab.osoyalce.com`, not `paris`).
@@ -552,6 +513,8 @@ OS Support Remaining: 1y 4w
         Firmware Age: 14y 1month 3w
 ```
 
+If your hostname is not set correctly, you can set it with a `hostnamectl hostname paris.lab.osoyalce.com`, but -of course- use your own hostname.
+
 ## Install the FreeIPA Client
 
 It's already installed here.
@@ -560,6 +523,12 @@ It's already installed here.
 
 ```bash
 dnf install freeipa-client
+```
+
+or 
+
+```bash
+apt install freeipa-client
 ```
 
 **Example Output:**
@@ -580,8 +549,8 @@ I have FreeIPA deployed on `kermit.lab.osoyalce.com` which has an IP of `192.168
 **Command:**
 
 ```bash
-nmcli c m "wired connection" ipv4.dns 192.168.0.176
-nmcli c u "wired connection"
+nmcli connection modify "wired connection" ipv4.dns 192.168.0.176
+nmcli connection up "wired connection"
 host kermit.lab.osoyalce.com
 ```
 
